@@ -1,0 +1,1863 @@
+{
+  "users": [
+    {
+      "id": "u_1788163759754",
+      "name": "Dr. Rajesh Sharma",
+      "email": "sharma@school.edu",
+      "role": "teacher",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Senior STEM & Science Faculty",
+      "specialty": "Science (Physics)",
+      "createdClasses": [
+        "c_science_physics",
+        "c_maths_geom",
+        "c_it_tech"
+      ],
+      "joinedClasses": [],
+      "xp": 450,
+      "level": 2,
+      "streak": 3,
+      "badges": [
+        "b_founder",
+        "b_master_educator"
+      ],
+      "createdAt": "2026-08-31T08:09:19.754Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 0,
+        "averageQuizScore": 0,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      },
+      "salt": "0c7de547cfd627ce4efca9ef47023979",
+      "hash": "a6b13baea848fecb2d09c32e8f8ca717700c80ae6618a22de820adf0267300368b3e32bae795b4b02198afb9051964900673957e99adb9ee2c31770e90e33c3d"
+    },
+    {
+      "id": "u_1788164009030",
+      "name": "Akshat Singh",
+      "email": "akshatsingh3111@gmail.com",
+      "role": "student",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Student • Grade 10 Section B",
+      "createdClasses": [],
+      "joinedClasses": [
+        "c_science_physics",
+        "c_maths_geom",
+        "c_it_tech",
+        "c_1788421696602"
+      ],
+      "xp": 3010,
+      "level": 11,
+      "streak": 4,
+      "badges": [
+        "b_founder",
+        "b_math_maverick",
+        "b_early_bird",
+        "b_perfect_score",
+        "b_speed_demon",
+        "b_streak_titan",
+        "b_top_ranker"
+      ],
+      "createdAt": "2026-08-31T08:13:29.030Z",
+      "stats": {
+        "assignmentsCompleted": 1,
+        "quizzesCompleted": 13,
+        "averageQuizScore": 79.8,
+        "studyHours": 6,
+        "flashcardsMastered": 12
+      },
+      "salt": "6ca4bffef45526e994df804938694d49",
+      "hash": "87378dfe06de3bb24de2240e843e185fe04c2748b463846b7173899cc454f21946a650870c96862375f672769686334346cdd146e852245946253a8813b44d48",
+      "geminiApiKey": ""
+    },
+    {
+      "id": "u_1788421637423",
+      "name": "Akshat Singh",
+      "email": "akshat03012011@gmail.com",
+      "salt": "d227e47928495db58885e71799ce8a9d",
+      "hash": "e95441d2dc2c67faa5f83e5f401663efb573fc8c48795bb5c87b8c09723ecc186a905724b935b58b2c474b26148599bc9838c6e3794350de35b713b751676781",
+      "role": "teacher",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Educator • Computer Science",
+      "specialty": "Computer Science",
+      "createdClasses": [
+        "c_1788421654559",
+        "c_1788421696602",
+        "c_1792499462501"
+      ],
+      "joinedClasses": [],
+      "xp": 1366,
+      "level": 5,
+      "streak": 1,
+      "badges": [
+        "b_founder",
+        "b_perfect_score",
+        "b_speed_demon",
+        "b_early_bird"
+      ],
+      "createdAt": "2026-09-03T07:47:17.423Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 4,
+        "averageQuizScore": 91.8,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      },
+      "geminiApiKey": ""
+    },
+    {
+      "id": "u_1792131885743",
+      "name": "Canada ka papa",
+      "email": "vanshbosss12111@gmail.com",
+      "salt": "2e44c3f45258a6758961d58be2dd604e",
+      "hash": "c0e0e82b2f939134d96317322cfca0c57ce41d6e6eee86c28c6780f81847d131e104f00235d2c1f1aa773f14d87a83ad3701a58b3ff25487c666aaf53ca79477",
+      "role": "student",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Canada%20ka%20papa&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Student • Grade 10 Section B",
+      "createdClasses": [],
+      "joinedClasses": [
+        "c_science_physics",
+        "c_maths_geom",
+        "c_it_tech",
+        "c_1788421696602"
+      ],
+      "xp": 170,
+      "level": 1,
+      "streak": 1,
+      "badges": [
+        "b_founder"
+      ],
+      "createdAt": "2026-10-16T06:24:45.743Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 0,
+        "averageQuizScore": 0,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      }
+    },
+    {
+      "id": "u_1792132266814",
+      "name": "Vedant",
+      "email": "vedantisgenius1502@gmail.com",
+      "salt": "aeb7046a580cc01c5c54c4e154229917",
+      "hash": "b8782262c305db24acd4214fbd2470c2771d9d030a025bb5c6c009585d502958038ae1e34e42b0e19c44e2a95b5411b3a986c3bb286458630631016166eaf910",
+      "role": "student",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Vedant&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Student • Grade 10 Section B",
+      "createdClasses": [],
+      "joinedClasses": [
+        "c_science_physics",
+        "c_maths_geom",
+        "c_it_tech",
+        "c_1788421696602"
+      ],
+      "xp": 271,
+      "level": 1,
+      "streak": 1,
+      "badges": [
+        "b_founder"
+      ],
+      "createdAt": "2026-10-16T06:31:06.814Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 1,
+        "averageQuizScore": 67,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      }
+    },
+    {
+      "id": "u_1792499369266",
+      "name": "Priya Singh",
+      "email": "nandanisinghhh@gmail.com",
+      "salt": "b7e04a5deb3c2c988f74e44e0ede8a36",
+      "hash": "5e51f356e15ecb26e6e922d7430d5129be5af0904930f48fc74f26702b3c1f74259d8b13c9b2c74dd64d57b668724e787ee06488749fc82f6c85b76eebcaed73",
+      "role": "student",
+      "gradeClass": "Grade 11",
+      "section": "C",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Priya%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Student • Grade 11 Section C",
+      "createdClasses": [],
+      "joinedClasses": [
+        "c_1792499462501"
+      ],
+      "xp": 150,
+      "level": 1,
+      "streak": 1,
+      "badges": [
+        "b_founder"
+      ],
+      "createdAt": "2026-10-20T12:29:29.266Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 0,
+        "averageQuizScore": 0,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      }
+    }
+  ],
+  "classes": [
+    {
+      "id": "c_science_physics",
+      "code": "SCI101",
+      "title": "CBSE Class 10 Science: Physics (Electromagnetism & Light)",
+      "subject": "Science (Physics)",
+      "gradeLevel": "Grade 10",
+      "description": "Official CBSE Class 10 Science Physics curriculum covering Light Reflection/Refraction, Human Eye & Colourful World, and Electricity.",
+      "teacherId": "u_1788163759754",
+      "teacherName": "Dr. Rajesh Sharma",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "teal",
+      "bannerImage": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [
+        "u_1788164009030",
+        "u_1792132266814",
+        "u_1792131885743"
+      ],
+      "schedule": "Mon, Wed, Fri • 9:00 AM - 10:30 AM",
+      "roomLocation": "Science Lab 101",
+      "createdAt": "2026-08-31T08:09:32.458Z",
+      "aiTutorPersona": "Visual Science Explainer",
+      "stream": [
+        {
+          "id": "post_asg_sci_1",
+          "authorId": "u_1788163759754",
+          "authorName": "Dr. Rajesh Sharma",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "📝 CBSE Board Homework: Faraday's Law & Electromagnetic Induction",
+          "content": "Derive Faraday's Law of Induction \\(\\mathcal{E} = -\\frac{d\\Phi_B}{dt}\\) and explain Lenz's Law conservation of energy according to NCERT Chapter 13.",
+          "attachments": [
+            {
+              "type": "assignment",
+              "name": "Faraday's Law & Electromagnetic Induction",
+              "id": "asg_sci_1"
+            }
+          ],
+          "createdAt": "2026-08-31T08:09:32.629Z",
+          "reactions": {
+            "📚": 6,
+            "💪": 9
+          },
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "c_maths_geom",
+      "code": "MTH202",
+      "title": "CBSE Class 10 Maths: Trigonometry, Mensuration & Circles",
+      "subject": "Maths",
+      "gradeLevel": "Grade 10",
+      "description": "Comprehensive CBSE Class 10 Mathematics covering Real Numbers, Quadratic Equations, Trigonometric Identities, and Surface Areas & Volumes.",
+      "teacherId": "u_1788163759754",
+      "teacherName": "Dr. Rajesh Sharma",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "indigo",
+      "bannerImage": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [
+        "u_1788164009030",
+        "u_1792132266814",
+        "u_1792131885743"
+      ],
+      "schedule": "Tue, Thu • 10:45 AM - 12:15 PM",
+      "roomLocation": "Mathematics Wing 204",
+      "createdAt": "2026-09-01T09:00:00.000Z",
+      "aiTutorPersona": "Socratic Math Mentor",
+      "stream": [
+        {
+          "id": "post_math_welcome",
+          "authorId": "u_1788163759754",
+          "authorName": "Dr. Rajesh Sharma",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "📐 Welcome to CBSE Class 10 Mathematics Class!",
+          "content": "Welcome! We will delve into Trigonometric Identities \\(\\sin^2\\theta + \\cos^2\\theta = 1\\), Mensuration calculations for cones/spheres, and Basic Proportionality Theorem.",
+          "attachments": [],
+          "createdAt": "2026-09-01T09:00:00.000Z",
+          "reactions": {
+            "📐": 8,
+            "🚀": 5
+          },
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "c_it_tech",
+      "code": "IT505",
+      "title": "CBSE Class 10 IT: Information Technology (Code 402)",
+      "subject": "IT (Information Technology)",
+      "gradeLevel": "Grade 10",
+      "description": "CBSE IT 402 Curriculum: Digital Documentation, Calc Spreadsheets, RDBMS SQL Queries, and Web Security.",
+      "teacherId": "u_1788163759754",
+      "teacherName": "Dr. Rajesh Sharma",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Dr.%20Rajesh%20Sharma&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "cyan",
+      "bannerImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [
+        "u_1788164009030",
+        "u_1792132266814",
+        "u_1792131885743"
+      ],
+      "schedule": "Wed, Fri • 1:30 PM - 3:00 PM",
+      "roomLocation": "Computer Lab Alpha",
+      "createdAt": "2026-09-01T10:00:00.000Z",
+      "aiTutorPersona": "Socratic Coding Mentor",
+      "stream": []
+    },
+    {
+      "id": "c_1788421654559",
+      "code": "5CEMNC",
+      "title": "Class !0 B",
+      "subject": "Computer Science",
+      "gradeLevel": "Grade 11-12 / AP Prep",
+      "description": "Interactive virtual classroom on StudySync.",
+      "teacherId": "u_1788421637423",
+      "teacherName": "Akshat Singh",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "rose",
+      "bannerImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [],
+      "schedule": "Mon, Wed, Fri • 10:00 AM - 11:30 AM",
+      "roomLocation": "Virtual Lab Alpha / Room 302",
+      "createdAt": "2026-09-03T07:47:34.559Z",
+      "aiTutorPersona": "Socratic Coding Mentor",
+      "stream": [
+        {
+          "id": "post_welcome_1788421654559",
+          "authorId": "u_1788421637423",
+          "authorName": "Akshat Singh",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "👋 Welcome to Class !0 B!",
+          "content": "Welcome to our virtual classroom! Stream announcements, homework assignments, live SyncBoard whiteboard sessions, and AI study tools are now available. Share the room code **5CEMNC** with your classmates.",
+          "attachments": [],
+          "createdAt": "2026-09-03T07:47:34.559Z",
+          "reactions": {
+            "🎉": 4,
+            "🚀": 6
+          },
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "c_1788421696602",
+      "code": "NKZJ44",
+      "title": "Class 10 B",
+      "subject": "Computer Science",
+      "gradeLevel": "Grade 10",
+      "description": "Interactive virtual classroom on StudySync.",
+      "teacherId": "u_1788421637423",
+      "teacherName": "Akshat Singh",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "rose",
+      "bannerImage": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [
+        "u_1788164009030",
+        "u_1792132266814",
+        "u_1792131885743"
+      ],
+      "schedule": "Mon, Wed, Fri • 10:00 AM - 11:30 AM",
+      "roomLocation": "Virtual Lab Alpha / Room 302",
+      "createdAt": "2026-09-03T07:48:16.602Z",
+      "aiTutorPersona": "Deep Learning Research Coach",
+      "stream": [
+        {
+          "id": "post_1792064453003",
+          "authorId": "u_1788164009030",
+          "authorName": "Akshat Singh",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "student",
+          "title": "Physics Doubt",
+          "content": "What is Quantom Physics?",
+          "attachments": [],
+          "createdAt": "2026-10-15T11:40:53.003Z",
+          "reactions": {
+            "👍": 1,
+            "🚀": 1,
+            "❤️": 1
+          },
+          "comments": [
+            {
+              "id": "comm_1792151714630",
+              "authorId": "u_1788421637423",
+              "authorName": "Akshat Singh",
+              "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+              "content": "Quantum Physics is a unit of advanced Physics which deals with Quantum or molecular units physics.",
+              "createdAt": "2026-10-16T11:55:14.630Z"
+            }
+          ]
+        },
+        {
+          "id": "post_welcome_1788421696602",
+          "authorId": "u_1788421637423",
+          "authorName": "Akshat Singh",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "👋 Welcome to Class 10 B!",
+          "content": "Welcome to our virtual classroom! Stream announcements, homework assignments, live SyncBoard whiteboard sessions, and AI study tools are now available. Share the room code **NKZJ44** with your classmates.",
+          "attachments": [],
+          "createdAt": "2026-09-03T07:48:16.602Z",
+          "reactions": {
+            "🎉": 4,
+            "🚀": 6
+          },
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "c_1792499462501",
+      "code": "GGLFQS",
+      "title": "Class 11 C",
+      "subject": "Computer Science",
+      "gradeLevel": "Grade 11",
+      "description": "Interactive virtual classroom on StudySync.",
+      "teacherId": "u_1788421637423",
+      "teacherName": "Akshat Singh",
+      "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "themeColor": "rose",
+      "bannerImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "studentIds": [
+        "u_1792499369266"
+      ],
+      "schedule": "Mon, Wed, Fri • 10:00 AM - 11:30 AM",
+      "roomLocation": "Virtual Lab Alpha / Room 302",
+      "createdAt": "2026-10-20T12:31:02.502Z",
+      "aiTutorPersona": "Exam Cram Coach",
+      "stream": [
+        {
+          "id": "post_welcome_1792499462502",
+          "authorId": "u_1788421637423",
+          "authorName": "Akshat Singh",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "👋 Welcome to Class 11 C!",
+          "content": "Welcome to our virtual classroom! Stream announcements, homework assignments, live SyncBoard whiteboard sessions, and AI study tools are now available. Share the room code **GGLFQS** with your classmates.",
+          "attachments": [],
+          "createdAt": "2026-10-20T12:31:02.502Z",
+          "reactions": {
+            "🎉": 4,
+            "🚀": 6
+          },
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asg_sci_1",
+      "classId": "c_science_physics",
+      "title": "CBSE Board Assignment: Faraday's Law & Electromagnetic Induction",
+      "description": "Derive the Maxwell-Faraday equation: \\oint \\mathbf{E} \\cdot d\\mathbf{l} = -\\frac{d\\Phi_B}{dt} and explain the physical significance of Lenz's Law according to CBSE Chapter 13.",
+      "dueDate": "2026-09-10T18:00:00.000Z",
+      "points": 100,
+      "xpReward": 150,
+      "rubric": [
+        {
+          "criterion": "Magnetic Flux Integral Derivation",
+          "maxPoints": 50
+        },
+        {
+          "criterion": "Lenz's Law & Conservation of Energy Analysis",
+          "maxPoints": 30
+        },
+        {
+          "criterion": "Mathematical Rigor & LaTeX Formatting",
+          "maxPoints": 20
+        }
+      ],
+      "allowAIPrecheck": true,
+      "autoAIGrading": true,
+      "submissionsCount": 1,
+      "gradedCount": 1,
+      "createdAt": "2026-08-31T08:09:32.495Z"
+    },
+    {
+      "id": "asg_math_1",
+      "classId": "c_maths_geom",
+      "title": "CBSE Class 10 Maths: Trigonometric Proofs & Frustum Modeling",
+      "description": "Prove that \\frac{\\tan\\theta}{1 - \\cot\\theta} + \\frac{\\cot\\theta}{1 - \\tan\\theta} = 1 + \\sec\\theta \\csc\\theta and calculate the volume of a cone frustum of radii 4cm, 2cm and height 6cm.",
+      "dueDate": "2026-09-12T18:00:00.000Z",
+      "points": 100,
+      "xpReward": 150,
+      "rubric": [
+        {
+          "criterion": "Trigonometric Algebraic Proof Steps",
+          "maxPoints": 50
+        },
+        {
+          "criterion": "Frustum Volume Calculation Accuracy",
+          "maxPoints": 30
+        },
+        {
+          "criterion": "Step-by-Step Presentation & Units",
+          "maxPoints": 20
+        }
+      ],
+      "allowAIPrecheck": true,
+      "autoAIGrading": true,
+      "submissionsCount": 1,
+      "gradedCount": 1,
+      "createdAt": "2026-09-02T10:00:00.000Z"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_1788164051958",
+      "assignmentId": "asg_sci_1",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "submittedAt": "2026-08-31T08:14:11.958Z",
+      "status": "graded",
+      "content": "Using Faraday Law of Induction: \\mathcal{E} = -\\frac{d\\Phi_B}{dt}. The magnetic flux through an open surface bounded by loop C is \\Phi_B = \\int_S \\mathbf{B} \\cdot d\\mathbf{A}. Applying Stokes Theorem yields \\oint_C \\mathbf{E} \\cdot d\\mathbf{l} = -\\frac{d}{dt} \\int_S \\mathbf{B} \\cdot d\\mathbf{A}. Lenz Law ensures conservation of energy.",
+      "attachments": [],
+      "grade": 94,
+      "feedback": "Outstanding derivation! The application of Stokes theorem and physical interpretation of Lenz law are completely rigorous and well-formatted.",
+      "aiSuggestedScore": 94,
+      "aiRubricBreakdown": [
+        {
+          "criterion": "Magnetic Flux Integral Derivation",
+          "score": 48,
+          "maxScore": 50,
+          "comment": "Thorough derivation with accurate flux integral formulation."
+        },
+        {
+          "criterion": "Lenz's Law & Conservation of Energy Analysis",
+          "score": 28,
+          "maxScore": 30,
+          "comment": "Accurate physical justification of the negative sign."
+        },
+        {
+          "criterion": "Mathematical Rigor & LaTeX Formatting",
+          "score": 18,
+          "maxScore": 20,
+          "comment": "Clean mathematical typography and notation."
+        }
+      ],
+      "aiFeedback": "Outstanding derivation! The application of Stokes theorem and physical interpretation of Lenz law are completely rigorous and well-formatted.",
+      "gradedAt": "2026-09-19T11:38:50.195Z"
+    },
+    {
+      "id": "sub_1788421561389",
+      "assignmentId": "asg_math_1",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "submittedAt": "2026-10-15T11:44:13.930Z",
+      "status": "submitted",
+      "content": "Let's start with the Left-Hand Side (LHS):\nLHS\n=\ntan\n⁡\nθ\n1\n−\ncot\n⁡\nθ\n+\ncot\n⁡\nθ\n1\n−\ntan\n⁡\nθ\nLHS= \n1−cotθ\ntanθ\n​\n + \n1−tanθ\ncotθ\n​\n \n\n\nStep 1: Express \ncot\n⁡\nθ\ncotθ in terms of \ntan\n⁡\nθ\ntanθ\nSince \ncot\n⁡\nθ\n=\n1\ntan\n⁡\nθ\ncotθ= \ntanθ\n1\n​\n , substitute it into the expression:\nLHS\n=\ntan\n⁡\nθ\n1\n−\n1\ntan\n⁡\nθ\n+\n1\ntan\n⁡\nθ\n1\n−\ntan\n⁡\nθ\nLHS= \n1− \ntanθ\n1\n​\n \ntanθ\n​\n + \n1−tanθ\ntanθ\n1\n​\n \n​\n \n\n\nStep 2: Simplify the fractions\nLHS\n=\ntan\n⁡\nθ\ntan\n⁡\nθ\n−\n1\ntan\n⁡\nθ\n+\n1\ntan\n⁡\nθ\n(\n1\n−\ntan\n⁡\nθ\n)\nLHS= \ntanθ\ntanθ−1\n​\n \ntanθ\n​\n + \ntanθ(1−tanθ)\n1\n​\n \n\nLHS\n=\ntan\n⁡\n2\nθ\ntan\n⁡\nθ\n−\n1\n+\n1\ntan\n⁡\nθ\n(\n1\n−\ntan\n⁡\nθ\n)\nLHS= \ntanθ−1\ntan \n2\n θ\n​\n + \ntanθ(1−tanθ)\n1\n​\n \n\n\nStep 3: Make the denominators identical\nNotice that \n(\n1\n−\ntan\n⁡\nθ\n)\n=\n−\n(\ntan\n⁡\nθ\n−\n1\n)\n(1−tanθ)=−(tanθ−1). Factor out a negative sign:\nLHS\n=\ntan\n⁡\n2\nθ\ntan\n⁡\nθ\n−\n1\n−\n1\ntan\n⁡\nθ\n(\ntan\n⁡\nθ\n−\n1\n)\nLHS= \ntanθ−1\ntan \n2\n θ\n​\n − \ntanθ(tanθ−1)\n1\n​\n \n\n\nCombine over a common denominator \ntan\n⁡\nθ\n(\ntan\n⁡\nθ\n−\n1\n)\ntanθ(tanθ−1):\nLHS\n=\ntan\n⁡\n3\nθ\n−\n1\ntan\n⁡\nθ\n(\ntan\n⁡\nθ\n−\n1\n)\nLHS= \ntanθ(tanθ−1)\ntan \n3\n θ−1\n​\n \n\n\nStep 4: Use the algebraic identity \na\n3\n−\nb\n3\n=\n(\na\n−\nb\n)\n(\na\n2\n+\na\nb\n+\nb\n2\n)\na \n3\n −b \n3\n =(a−b)(a \n2\n +ab+b \n2\n )\nHere, \na\n=\ntan\n⁡\nθ\na=tanθ and \nb\n=\n1\nb=1:\nLHS\n=\n(\ntan\n⁡\nθ\n−\n1\n)\n(\ntan\n⁡\n2\nθ\n+\ntan\n⁡\nθ\n+\n1\n)\ntan\n⁡\nθ\n(\ntan\n⁡\nθ\n−\n1\n)\nLHS= \ntanθ(tanθ−1)\n(tanθ−1)(tan \n2\n θ+tanθ+1)\n​\n \n\n\nCanceling \\((\\tan\\theta -",
+      "attachments": [],
+      "grade": 98,
+      "feedback": "Great work on this submission! The response demonstrates a clear understanding of the subject matter. To achieve perfection, ensure all edge cases and boundary conditions are explicitly outlined in the discussion.",
+      "aiSuggestedScore": 98,
+      "aiRubricBreakdown": [
+        {
+          "criterion": "Trigonometric Algebraic Proof Steps",
+          "score": 49,
+          "maxScore": 50,
+          "comment": "Exceptional formatting, accurate syntax, and rigorous mathematical/code analysis."
+        },
+        {
+          "criterion": "Frustum Volume Calculation Accuracy",
+          "score": 29,
+          "maxScore": 30,
+          "comment": "Exceptional formatting, accurate syntax, and rigorous mathematical/code analysis."
+        },
+        {
+          "criterion": "Step-by-Step Presentation & Units",
+          "score": 20,
+          "maxScore": 20,
+          "comment": "Exceptional formatting, accurate syntax, and rigorous mathematical/code analysis."
+        }
+      ],
+      "aiFeedback": "Great work on this submission! The response demonstrates a clear understanding of the subject matter. To achieve perfection, ensure all edge cases and boundary conditions are explicitly outlined in the discussion.",
+      "gradedAt": "2026-09-19T11:38:57.756Z"
+    }
+  ],
+  "tests": [
+    {
+      "id": "t_cbse_math_1",
+      "classId": "c_maths_geom",
+      "title": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "type": "CBSE Board Assessment Arena",
+      "subject": "Maths",
+      "gradeLevel": "Grade 10",
+      "topic": "Trigonometric Identities & Surface Areas (Chapter 8 & 13)",
+      "date": "2026-09-08T09:00:00.000Z",
+      "timeLimitMinutes": 25,
+      "totalPoints": 100,
+      "xpReward": 150,
+      "questions": [
+        {
+          "id": "qm1",
+          "question": "According to the CBSE Class 10 Trigonometry syllabus, what is the simplified value of \\(\\sin^2(63^\\circ) + \\sin^2(27^\\circ)\\)?",
+          "options": [
+            "\\(0\\)",
+            "\\(1\\)",
+            "\\(2\\)",
+            "\\(\\frac{1}{2}\\)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        {
+          "id": "qm2",
+          "question": "What is the Total Surface Area of a solid right circular cone of base radius \\(r\\) and slant height \\(l\\)?",
+          "options": [
+            "\\(\\pi r l\\)",
+            "\\(\\pi r (l + r)\\)",
+            "\\(2 \\pi r (h + r)\\)",
+            "\\(\\frac{1}{3} \\pi r^2 h\\)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        {
+          "id": "qm3",
+          "question": "If the discriminant \\(D = b^2 - 4ac = 0\\) in quadratic equation \\(ax^2 + bx + c = 0\\), what is the nature of its roots?",
+          "options": [
+            "Real and distinct roots",
+            "Real and equal roots",
+            "No real roots (Complex conjugate roots)",
+            "Zero roots"
+          ],
+          "correctAnswer": 1,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_sci_phy",
+      "classId": "c_science_physics",
+      "title": "CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)",
+      "type": "CBSE Board Examination Arena",
+      "subject": "Science (Physics)",
+      "gradeLevel": "Grade 10",
+      "topic": "Light & Electricity (NCERT Chapters 10 & 12)",
+      "date": "2026-09-10T10:00:00.000Z",
+      "timeLimitMinutes": 20,
+      "totalPoints": 100,
+      "xpReward": 150,
+      "questions": [
+        {
+          "id": "qs1",
+          "question": "A concave mirror produces a three times magnified real image of an object placed at 10 cm in front of it. What is the image distance \\(v\\)?",
+          "options": [
+            "\\(-30\\,\\text{cm}\\)",
+            "\\(+30\\,\\text{cm}\\)",
+            "\\(-10\\,\\text{cm}\\)",
+            "\\(+15\\,\\text{cm}\\)"
+          ],
+          "correctAnswer": 0,
+          "explanation": "For a real inverted image, magnification \\(m = -v/u = -3\\). With \\(u = -10\\,\\text{cm}\\), we obtain \\(v = 3u = 3(-10) = -30\\,\\text{cm}\\)."
+        },
+        {
+          "id": "qs2",
+          "question": "Which physical law states that the heat produced in a resistor is directly proportional to the square of current, resistance, and time \\(H = I^2 R t\\)?",
+          "options": [
+            "Ohm's Law",
+            "Joule's Law of Heating",
+            "Faraday's Law",
+            "Ampere's Circuital Law"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Joule's Law of Heating states that heat produced in a conductor is given by \\(H = I^2 R t\\)."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_sci_chem",
+      "title": "CBSE Class 10 Science: Chemical Reactions & Acids, Bases, Salts (Code 086)",
+      "type": "CBSE Chapter Assessment",
+      "subject": "Science (Chemistry)",
+      "gradeLevel": "Grade 10",
+      "topic": "Chemical Reactions, Acids & Salts (NCERT Chapters 1 & 2)",
+      "date": "2026-09-12T11:00:00.000Z",
+      "timeLimitMinutes": 20,
+      "totalPoints": 100,
+      "xpReward": 150,
+      "questions": [
+        {
+          "id": "qc1",
+          "question": "What is the chemical formula and IUPAC name of Plaster of Paris (POP)?",
+          "options": [
+            "\\(\\text{CaSO}_4 \\cdot 2\\text{H}_2\\text{O}\\) (Calcium Sulphate Dihydrate)",
+            "\\(\\text{CaSO}_4 \\cdot \\frac{1}{2}\\text{H}_2\\text{O}\\) (Calcium Sulphate Hemihydrate)",
+            "\\(\\text{CaOCl}_2\\) (Calcium Oxychloride)",
+            "\\(\\text{NaHCO}_3\\) (Sodium Hydrogen Carbonate)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Plaster of Paris is Calcium Sulphate Hemihydrate \\(\\text{CaSO}_4 \\cdot \\frac{1}{2}\\text{H}_2\\text{O}\\), prepared by heating gypsum at 373 K."
+        },
+        {
+          "id": "qc2",
+          "question": "When zinc granules react with dilute sulphuric acid, which gas is liberated that burns with a pop sound?",
+          "options": [
+            "Oxygen (\\(\\text{O}_2\\))",
+            "Hydrogen (\\(\\text{H}_2\\))",
+            "Carbon Dioxide (\\(\\text{CO}_2\\))",
+            "Sulphur Dioxide (\\(\\text{SO}_2\\))"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Reaction: \\(\\text{Zn} + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{H}_2\\uparrow\\). Hydrogen gas burns with a characteristic pop sound."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_sci_bio",
+      "title": "CBSE Class 10 Science: Life Processes & Heredity (Code 086)",
+      "type": "CBSE Diagnostic Quiz",
+      "subject": "Science (Biology)",
+      "gradeLevel": "Grade 10",
+      "topic": "Life Processes & Heredity (NCERT Chapters 6 & 9)",
+      "date": "2026-09-14T09:30:00.000Z",
+      "timeLimitMinutes": 15,
+      "totalPoints": 50,
+      "xpReward": 100,
+      "questions": [
+        {
+          "id": "qb1",
+          "question": "What is the basic functional structural filtration unit of the human kidney?",
+          "options": [
+            "Neuron",
+            "Nephron",
+            "Alveoli",
+            "Villi"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Each kidney has a large number of filtration units called Nephrons, which filter blood to remove nitrogenous wastes like urea."
+        },
+        {
+          "id": "qb2",
+          "question": "In a cross between a pure tall pea plant (TT) and a short pea plant (tt), what is the phenotypic ratio in the F2 generation according to Mendel's Monohybrid Cross?",
+          "options": [
+            "\\(1:2:1\\)",
+            "\\(3:1\\) (3 Tall : 1 Short)",
+            "\\(9:3:3:1\\)",
+            "\\(2:1\\)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "In the F2 generation of a monohybrid cross, the phenotypic ratio is 3 Tall : 1 Dwarf (Genotypic ratio is 1 TT : 2 Tt : 1 tt)."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_sst_hist",
+      "title": "CBSE Class 10 Social Science: Nationalism in India & Europe (Code 087)",
+      "type": "CBSE Board Assessment",
+      "subject": "Social Studies (History)",
+      "gradeLevel": "Grade 10",
+      "topic": "Nationalism in India & Europe (History Chapters 1 & 2)",
+      "date": "2026-09-16T11:00:00.000Z",
+      "timeLimitMinutes": 20,
+      "totalPoints": 100,
+      "xpReward": 150,
+      "questions": [
+        {
+          "id": "qsh1",
+          "question": "Why did Mahatma Gandhi call off the Non-Cooperation Movement in February 1922?",
+          "options": [
+            "Due to the Jallianwala Bagh Massacre",
+            "Due to the Chauri Chaura violent incident in Gorakhpur",
+            "Due to the Simon Commission arrival",
+            "Due to the signing of the Gandhi-Irwin Pact"
+          ],
+          "correctAnswer": 1,
+          "explanation": "At Chauri Chaura in Gorakhpur, a peaceful demonstration turned violent and a police station was burned, prompting Gandhi to halt the movement."
+        },
+        {
+          "id": "qsh2",
+          "question": "Which historic pact between Mahatma Gandhi and Dr. B.R. Ambedkar in 1932 gave reserved seats in Provincial and Central Legislative Councils to Depressed Classes?",
+          "options": [
+            "Lucknow Pact",
+            "Poona Pact",
+            "Gandhi-Irwin Pact",
+            "Lahore Resolution"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Poona Pact of September 1932 gave reserved seats to the Depressed Classes in general electorates rather than separate electorates."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_sst_civ",
+      "title": "CBSE Class 10 Social Science: Power Sharing & Federalism (Code 087)",
+      "type": "CBSE Periodic Quiz",
+      "subject": "Social Studies (Civics)",
+      "gradeLevel": "Grade 10",
+      "topic": "Democratic Politics (Civics Chapters 1 & 2)",
+      "date": "2026-09-18T10:00:00.000Z",
+      "timeLimitMinutes": 15,
+      "totalPoints": 50,
+      "xpReward": 100,
+      "questions": [
+        {
+          "id": "qsc1",
+          "question": "Which constitutional tier of government was strengthened in India by the 73rd and 74th Constitutional Amendments in 1992?",
+          "options": [
+            "Union / Central Government",
+            "Third Tier: Panchayati Raj and Municipalities (Decentralization)",
+            "Supreme Court and High Courts",
+            "Election Commission of India"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The 1992 amendments made decentralization effective by creating a mandatory third tier of local self-government (Panchayats and Municipalities)."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_eng",
+      "title": "CBSE Class 10 English: Grammar & First Flight Prose (Code 184)",
+      "type": "CBSE Diagnostic Quiz",
+      "subject": "English",
+      "gradeLevel": "Grade 10",
+      "topic": "Grammar & First Flight (Code 184)",
+      "date": "2026-09-20T10:00:00.000Z",
+      "timeLimitMinutes": 15,
+      "totalPoints": 50,
+      "xpReward": 100,
+      "questions": [
+        {
+          "id": "qeng1",
+          "question": "In 'A Letter to God' by G.L. Fuentes, what did Lencho compare the heavy raindrops to?",
+          "options": [
+            "Pearls of ice",
+            "New silver coins",
+            "Golden drops",
+            "Diamonds"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Lencho compared the big drops to ten-cent pieces and the small ones to five-cent coins ('new coins')."
+        },
+        {
+          "id": "qeng2",
+          "question": "Choose the correct indirect reported speech for: He said, 'I have completed my science assignment.'",
+          "options": [
+            "He said that he has completed his science assignment.",
+            "He said that he had completed his science assignment.",
+            "He said that I had completed my science assignment.",
+            "He told that he had completed his science assignment."
+          ],
+          "correctAnswer": 1,
+          "explanation": "Present perfect ('have completed') shifts to past perfect ('had completed') and the pronoun shifts to 'he'."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_hin",
+      "title": "CBSE Class 10 Hindi: वाक्य भेद, वाच्य, समास व पद परिचय (Code 002/085)",
+      "type": "CBSE Vyakaran Abhyas",
+      "subject": "Hindi",
+      "gradeLevel": "Grade 10",
+      "topic": "व्याकरण एवं पाठ्यपुस्तक अभ्यास",
+      "date": "2026-09-22T11:00:00.000Z",
+      "timeLimitMinutes": 15,
+      "totalPoints": 50,
+      "xpReward": 100,
+      "questions": [
+        {
+          "id": "qhin1",
+          "question": "'जब वर्षा हुई, तब मोर नाचने लगे।' - यह वाक्य रचना की दृष्टि से किस प्रकार का वाक्य है?",
+          "options": [
+            "सरल वाक्य",
+            "संयुक्त वाक्य",
+            "मिश्र वाक्य",
+            "संदेहवाचक वाक्य"
+          ],
+          "correctAnswer": 2,
+          "explanation": "जिस वाक्य में एक मुख्य उपवाक्य और एक या अधिक आश्रित उपवाक्य योजक (जब...तब) से जुड़े हों, वह 'मिश्र वाक्य' कहलाता है।"
+        },
+        {
+          "id": "qhin2",
+          "question": "'बालक द्वारा पत्र लिखा जाता है।' - इस वाक्य में कौन-सा वाच्य है?",
+          "options": [
+            "कर्तृवाच्य",
+            "कर्मवाच्य",
+            "भाववाच्य",
+            "करणवाच्य"
+          ],
+          "correctAnswer": 1,
+          "explanation": "यहाँ कर्म (पत्र) प्रधान है और क्रिया का लिंग-वचन कर्म के अनुसार है ('लिखा जाता है'), अतः यह 'कर्मवाच्य' है।"
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_it",
+      "classId": "c_it_tech",
+      "title": "CBSE Class 10 IT: RDBMS SQL Queries & Spreadsheets (Code 402)",
+      "type": "CBSE Board Examination Arena",
+      "subject": "IT (Information Technology)",
+      "gradeLevel": "Grade 10",
+      "topic": "RDBMS Database, Calc & Web Security (IT 402)",
+      "date": "2026-09-24T14:00:00.000Z",
+      "timeLimitMinutes": 20,
+      "totalPoints": 100,
+      "xpReward": 150,
+      "questions": [
+        {
+          "id": "qit1",
+          "question": "In a Relational Database Management System (RDBMS), what uniquely identifies each record/tuple in a table?",
+          "options": [
+            "Foreign Key",
+            "Primary Key",
+            "Candidate Key",
+            "Alternate Key"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A Primary Key is a column or set of columns that uniquely and non-null identifies each row in a database table."
+        },
+        {
+          "id": "qit2",
+          "question": "Which tool in LibreOffice Calc / Excel is used to determine what input value is needed to achieve a desired target output formula result?",
+          "options": [
+            "Consolidate",
+            "Goal Seek",
+            "Subtotals",
+            "Mail Merge"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Goal Seek is a What-If Analysis tool that calculates the input value required to reach a specific target outcome."
+        }
+      ]
+    },
+    {
+      "id": "t_cbse_pe",
+      "title": "CBSE Class 10 PE: Anatomy, Sports Injuries & Yoga Wellness",
+      "type": "CBSE Physical Health Assessment",
+      "subject": "PE (Physical Education)",
+      "gradeLevel": "Grade 10",
+      "topic": "Health & Physical Education",
+      "date": "2026-09-26T10:00:00.000Z",
+      "timeLimitMinutes": 15,
+      "totalPoints": 50,
+      "xpReward": 100,
+      "questions": [
+        {
+          "id": "qpe1",
+          "question": "In sports medicine and first aid, what does the acronym 'PRICER' stand for when managing acute soft tissue injuries?",
+          "options": [
+            "Practice, Run, Ice, Clean, Exercise, Recover",
+            "Protect, Rest, Ice, Compress, Elevate, Refer",
+            "Prevent, Rotate, Inject, Care, Examine, Relax",
+            "Push, Rub, Inhale, Cool, Extend, Rebound"
+          ],
+          "correctAnswer": 1,
+          "explanation": "PRICER stands for Protect, Rest, Ice, Compress, Elevate, and Refer — the standard acute sports injury treatment protocol."
+        }
+      ]
+    }
+  ],
+  "testResults": [
+    {
+      "id": "res_akshat_math",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "score": 96,
+      "totalPoints": 100,
+      "percentage": 96,
+      "timeSpentSeconds": 720,
+      "submittedAt": "2026-09-01T14:30:00.000Z",
+      "topicBreakdown": {
+        "Maths": 96
+      },
+      "aiDiagnosis": "Mastery level reached in CBSE Class 10 Trigonometric identities and Surface Area calculations."
+    },
+    {
+      "id": "res_akshat_sci",
+      "testId": "t_cbse_sci_phy",
+      "testTitle": "CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "score": 92,
+      "totalPoints": 100,
+      "percentage": 92,
+      "timeSpentSeconds": 580,
+      "submittedAt": "2026-09-02T16:00:00.000Z",
+      "topicBreakdown": {
+        "Science (Physics)": 92
+      },
+      "aiDiagnosis": "Strong command over CBSE Class 10 Optics formulas and Ohm's Law circuits."
+    },
+    {
+      "id": "res_1789818500174",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1788421637423",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 67,
+      "totalPoints": 100,
+      "percentage": 67,
+      "timeSpentSeconds": 21,
+      "submittedAt": "2026-09-19T11:48:20.174Z",
+      "answers": {
+        "qm1": 0,
+        "qm2": 1,
+        "qm3": 1
+      },
+      "detailedAnswers": {
+        "qm1": {
+          "selected": 0,
+          "correct": 1,
+          "isCorrect": false,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        "qm2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        "qm3": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Trigonometric Identities & Surface Areas (Chapter 8 & 13)": 67
+      },
+      "aiDiagnosis": "Good effort! You grasp the fundamentals of Trigonometric Identities & Surface Areas (Chapter 8 & 13), but should review boundary conditions and asymptotic proofs before the final exam."
+    },
+    {
+      "id": "res_1789892840585",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1788421637423",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 27,
+      "submittedAt": "2026-09-20T08:27:20.585Z",
+      "answers": {
+        "qm1": 1,
+        "qm2": 1,
+        "qm3": 1
+      },
+      "detailedAnswers": {
+        "qm1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        "qm2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        "qm3": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Trigonometric Identities & Surface Areas (Chapter 8 & 13)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789892913778",
+      "testId": "t_cbse_sci_phy",
+      "testTitle": "CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)",
+      "studentId": "u_1788421637423",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 46,
+      "submittedAt": "2026-09-20T08:28:33.778Z",
+      "answers": {
+        "qs2": 1,
+        "qs1": 0
+      },
+      "detailedAnswers": {
+        "qs1": {
+          "selected": 0,
+          "correct": 0,
+          "isCorrect": true,
+          "explanation": "For a real inverted image, magnification \\(m = -v/u = -3\\). With \\(u = -10\\,\\text{cm}\\), we obtain \\(v = 3u = 3(-10) = -30\\,\\text{cm}\\)."
+        },
+        "qs2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Joule's Law of Heating states that heat produced in a conductor is given by \\(H = I^2 R t\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Light & Electricity (NCERT Chapters 10 & 12)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789892965123",
+      "testId": "t_cbse_eng",
+      "testTitle": "CBSE Class 10 English: Grammar & First Flight Prose (Code 184)",
+      "studentId": "u_1788421637423",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 50,
+      "totalPoints": 50,
+      "percentage": 100,
+      "timeSpentSeconds": 26,
+      "submittedAt": "2026-09-20T08:29:25.123Z",
+      "answers": {
+        "qeng1": 1,
+        "qeng2": 1
+      },
+      "detailedAnswers": {
+        "qeng1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Lencho compared the big drops to ten-cent pieces and the small ones to five-cent coins ('new coins')."
+        },
+        "qeng2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Present perfect ('have completed') shifts to past perfect ('had completed') and the pronoun shifts to 'he'."
+        }
+      },
+      "topicBreakdown": {
+        "Grammar & First Flight (Code 184)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 English: Grammar & First Flight Prose (Code 184)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894007011",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 10,
+      "submittedAt": "2026-09-20T08:46:47.011Z",
+      "answers": {
+        "qm1": 1,
+        "qm2": 1,
+        "qm3": 1
+      },
+      "detailedAnswers": {
+        "qm1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        "qm2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        "qm3": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Trigonometric Identities & Surface Areas (Chapter 8 & 13)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894040992",
+      "testId": "t_cbse_sci_phy",
+      "testTitle": "CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 7,
+      "submittedAt": "2026-09-20T08:47:20.992Z",
+      "answers": {
+        "qs1": 0,
+        "qs2": 1
+      },
+      "detailedAnswers": {
+        "qs1": {
+          "selected": 0,
+          "correct": 0,
+          "isCorrect": true,
+          "explanation": "For a real inverted image, magnification \\(m = -v/u = -3\\). With \\(u = -10\\,\\text{cm}\\), we obtain \\(v = 3u = 3(-10) = -30\\,\\text{cm}\\)."
+        },
+        "qs2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Joule's Law of Heating states that heat produced in a conductor is given by \\(H = I^2 R t\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Light & Electricity (NCERT Chapters 10 & 12)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894070829",
+      "testId": "t_cbse_sci_chem",
+      "testTitle": "CBSE Class 10 Science: Chemical Reactions & Acids, Bases, Salts (Code 086)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 15,
+      "submittedAt": "2026-09-20T08:47:50.829Z",
+      "answers": {
+        "qc1": 1,
+        "qc2": 1
+      },
+      "detailedAnswers": {
+        "qc1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Plaster of Paris is Calcium Sulphate Hemihydrate \\(\\text{CaSO}_4 \\cdot \\frac{1}{2}\\text{H}_2\\text{O}\\), prepared by heating gypsum at 373 K."
+        },
+        "qc2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Reaction: \\(\\text{Zn} + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{H}_2\\uparrow\\). Hydrogen gas burns with a characteristic pop sound."
+        }
+      },
+      "topicBreakdown": {
+        "Chemical Reactions, Acids & Salts (NCERT Chapters 1 & 2)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Science: Chemical Reactions & Acids, Bases, Salts (Code 086)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894109479",
+      "testId": "t_cbse_sci_bio",
+      "testTitle": "CBSE Class 10 Science: Life Processes & Heredity (Code 086)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 50,
+      "totalPoints": 50,
+      "percentage": 100,
+      "timeSpentSeconds": 29,
+      "submittedAt": "2026-09-20T08:48:29.479Z",
+      "answers": {
+        "qb1": 1,
+        "qb2": 1
+      },
+      "detailedAnswers": {
+        "qb1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Each kidney has a large number of filtration units called Nephrons, which filter blood to remove nitrogenous wastes like urea."
+        },
+        "qb2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "In the F2 generation of a monohybrid cross, the phenotypic ratio is 3 Tall : 1 Dwarf (Genotypic ratio is 1 TT : 2 Tt : 1 tt)."
+        }
+      },
+      "topicBreakdown": {
+        "Life Processes & Heredity (NCERT Chapters 6 & 9)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Science: Life Processes & Heredity (Code 086)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894133747",
+      "testId": "t_cbse_sst_hist",
+      "testTitle": "CBSE Class 10 Social Science: Nationalism in India & Europe (Code 087)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 13,
+      "submittedAt": "2026-09-20T08:48:53.747Z",
+      "answers": {
+        "qsh1": 1,
+        "qsh2": 1
+      },
+      "detailedAnswers": {
+        "qsh1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "At Chauri Chaura in Gorakhpur, a peaceful demonstration turned violent and a police station was burned, prompting Gandhi to halt the movement."
+        },
+        "qsh2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The Poona Pact of September 1932 gave reserved seats to the Depressed Classes in general electorates rather than separate electorates."
+        }
+      },
+      "topicBreakdown": {
+        "Nationalism in India & Europe (History Chapters 1 & 2)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Social Science: Nationalism in India & Europe (Code 087)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894154037",
+      "testId": "t_cbse_sst_civ",
+      "testTitle": "CBSE Class 10 Social Science: Power Sharing & Federalism (Code 087)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 50,
+      "totalPoints": 50,
+      "percentage": 100,
+      "timeSpentSeconds": 11,
+      "submittedAt": "2026-09-20T08:49:14.037Z",
+      "answers": {
+        "qsc1": 1
+      },
+      "detailedAnswers": {
+        "qsc1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The 1992 amendments made decentralization effective by creating a mandatory third tier of local self-government (Panchayats and Municipalities)."
+        }
+      },
+      "topicBreakdown": {
+        "Democratic Politics (Civics Chapters 1 & 2)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Social Science: Power Sharing & Federalism (Code 087)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894167965",
+      "testId": "t_cbse_eng",
+      "testTitle": "CBSE Class 10 English: Grammar & First Flight Prose (Code 184)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 50,
+      "totalPoints": 50,
+      "percentage": 100,
+      "timeSpentSeconds": 7,
+      "submittedAt": "2026-09-20T08:49:27.965Z",
+      "answers": {
+        "qeng1": 1,
+        "qeng2": 1
+      },
+      "detailedAnswers": {
+        "qeng1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Lencho compared the big drops to ten-cent pieces and the small ones to five-cent coins ('new coins')."
+        },
+        "qeng2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Present perfect ('have completed') shifts to past perfect ('had completed') and the pronoun shifts to 'he'."
+        }
+      },
+      "topicBreakdown": {
+        "Grammar & First Flight (Code 184)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 English: Grammar & First Flight Prose (Code 184)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1789894228506",
+      "testId": "t_cbse_hin",
+      "testTitle": "CBSE Class 10 Hindi: वाक्य भेद, वाच्य, समास व पद परिचय (Code 002/085)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 0,
+      "totalPoints": 50,
+      "percentage": 0,
+      "timeSpentSeconds": 35,
+      "submittedAt": "2026-09-20T08:50:28.506Z",
+      "answers": {
+        "qhin1": 1,
+        "qhin2": 3
+      },
+      "detailedAnswers": {
+        "qhin1": {
+          "selected": 1,
+          "correct": 2,
+          "isCorrect": false,
+          "explanation": "जिस वाक्य में एक मुख्य उपवाक्य और एक या अधिक आश्रित उपवाक्य योजक (जब...तब) से जुड़े हों, वह 'मिश्र वाक्य' कहलाता है।"
+        },
+        "qhin2": {
+          "selected": 3,
+          "correct": 1,
+          "isCorrect": false,
+          "explanation": "यहाँ कर्म (पत्र) प्रधान है और क्रिया का लिंग-वचन कर्म के अनुसार है ('लिखा जाता है'), अतः यह 'कर्मवाच्य' है।"
+        }
+      },
+      "topicBreakdown": {
+        "व्याकरण एवं पाठ्यपुस्तक अभ्यास": 0
+      },
+      "aiDiagnosis": "Recommended for review. We suggest reviewing the class lecture notes, practicing with the interactive flashcard deck, and asking StudyBot for step-by-step clarifications."
+    },
+    {
+      "id": "res_1789894249406",
+      "testId": "t_cbse_hin",
+      "testTitle": "CBSE Class 10 Hindi: वाक्य भेद, वाच्य, समास व पद परिचय (Code 002/085)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 25,
+      "totalPoints": 50,
+      "percentage": 50,
+      "timeSpentSeconds": 12,
+      "submittedAt": "2026-09-20T08:50:49.406Z",
+      "answers": {
+        "qhin1": 0,
+        "qhin2": 1
+      },
+      "detailedAnswers": {
+        "qhin1": {
+          "selected": 0,
+          "correct": 2,
+          "isCorrect": false,
+          "explanation": "जिस वाक्य में एक मुख्य उपवाक्य और एक या अधिक आश्रित उपवाक्य योजक (जब...तब) से जुड़े हों, वह 'मिश्र वाक्य' कहलाता है।"
+        },
+        "qhin2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "यहाँ कर्म (पत्र) प्रधान है और क्रिया का लिंग-वचन कर्म के अनुसार है ('लिखा जाता है'), अतः यह 'कर्मवाच्य' है।"
+        }
+      },
+      "topicBreakdown": {
+        "व्याकरण एवं पाठ्यपुस्तक अभ्यास": 50
+      },
+      "aiDiagnosis": "Recommended for review. We suggest reviewing the class lecture notes, practicing with the interactive flashcard deck, and asking StudyBot for step-by-step clarifications."
+    },
+    {
+      "id": "res_1792131639091",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 100,
+      "totalPoints": 100,
+      "percentage": 100,
+      "timeSpentSeconds": 20,
+      "submittedAt": "2026-10-16T06:20:39.091Z",
+      "answers": {
+        "qm1": 1,
+        "qm2": 1,
+        "qm3": 1
+      },
+      "detailedAnswers": {
+        "qm1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        "qm2": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        "qm3": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Trigonometric Identities & Surface Areas (Chapter 8 & 13)": 100
+      },
+      "aiDiagnosis": "Exceptional mastery! You achieved a perfect score on \"CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)\". Your conceptual intuition is sharp and accurate."
+    },
+    {
+      "id": "res_1792132301549",
+      "testId": "t_cbse_math_1",
+      "testTitle": "CBSE Class 10 Maths: Trigonometry, Mensuration & Geometry (Code 041)",
+      "studentId": "u_1792132266814",
+      "studentName": "Vedant",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Vedant&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 67,
+      "totalPoints": 100,
+      "percentage": 67,
+      "timeSpentSeconds": 6,
+      "submittedAt": "2026-10-16T06:31:41.549Z",
+      "answers": {
+        "qm1": 1,
+        "qm2": 2,
+        "qm3": 1
+      },
+      "detailedAnswers": {
+        "qm1": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "Since \\(\\sin(27^\\circ) = \\cos(90^\\circ - 27^\\circ) = \\cos(63^\\circ)\\), we get \\(\\sin^2(63^\\circ) + \\cos^2(63^\\circ) = 1\\) using the standard identity."
+        },
+        "qm2": {
+          "selected": 2,
+          "correct": 1,
+          "isCorrect": false,
+          "explanation": "The total surface area is the sum of curved surface area \\(\\pi r l\\) and base area \\(\\pi r^2\\): \\(\\text{TSA} = \\pi r (l + r)\\)."
+        },
+        "qm3": {
+          "selected": 1,
+          "correct": 1,
+          "isCorrect": true,
+          "explanation": "When discriminant \\(D = 0\\), the quadratic formula yields two real and equal roots \\(x = -\\frac{b}{2a}\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Trigonometric Identities & Surface Areas (Chapter 8 & 13)": 67
+      },
+      "aiDiagnosis": "Good effort! You grasp the fundamentals of Trigonometric Identities & Surface Areas (Chapter 8 & 13), but should review boundary conditions and asymptotic proofs before the final exam."
+    },
+    {
+      "id": "res_1792564812918",
+      "testId": "t_cbse_sci_phy",
+      "testTitle": "CBSE Class 10 Science: Light Reflection, Refraction & Electricity (Code 086)",
+      "studentId": "u_1788164009030",
+      "studentName": "Akshat Singh",
+      "studentAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "score": 0,
+      "totalPoints": 100,
+      "percentage": 0,
+      "timeSpentSeconds": 11,
+      "submittedAt": "2026-10-21T06:40:12.918Z",
+      "answers": {
+        "qs1": 1,
+        "qs2": 3
+      },
+      "detailedAnswers": {
+        "qs1": {
+          "selected": 1,
+          "correct": 0,
+          "isCorrect": false,
+          "explanation": "For a real inverted image, magnification \\(m = -v/u = -3\\). With \\(u = -10\\,\\text{cm}\\), we obtain \\(v = 3u = 3(-10) = -30\\,\\text{cm}\\)."
+        },
+        "qs2": {
+          "selected": 3,
+          "correct": 1,
+          "isCorrect": false,
+          "explanation": "Joule's Law of Heating states that heat produced in a conductor is given by \\(H = I^2 R t\\)."
+        }
+      },
+      "topicBreakdown": {
+        "Light & Electricity (NCERT Chapters 10 & 12)": 0
+      },
+      "aiDiagnosis": "Recommended for review. We suggest reviewing the class lecture notes, practicing with the interactive flashcard deck, and asking StudyBot for step-by-step clarifications."
+    }
+  ],
+  "badges": [
+    {
+      "id": "b_founder",
+      "name": "Platform Pioneer",
+      "description": "Early educator or student joining StudySync.",
+      "icon": "Sparkles",
+      "color": "from-amber-400 to-orange-500",
+      "rarity": "Legendary"
+    },
+    {
+      "id": "b_master_educator",
+      "name": "Master Educator",
+      "description": "Created interactive classroom assignments with AI auto-grading.",
+      "icon": "GraduationCap",
+      "color": "from-blue-500 to-indigo-600",
+      "rarity": "Epic"
+    },
+    {
+      "id": "b_top_ranker",
+      "name": "Top Ranker #1",
+      "description": "Achieved the #1 position on the class or global leaderboard.",
+      "icon": "Trophy",
+      "color": "from-yellow-400 to-amber-600",
+      "rarity": "Legendary"
+    },
+    {
+      "id": "b_math_maverick",
+      "name": "Math Maverick",
+      "description": "Solved advanced CBSE Class 10 mathematical challenges.",
+      "icon": "Sigma",
+      "color": "from-emerald-400 to-teal-600",
+      "rarity": "Rare"
+    },
+    {
+      "id": "b_streak_titan",
+      "name": "Streak Titan (7+ Days)",
+      "description": "Maintained an active daily learning streak for 7 consecutive days.",
+      "icon": "Flame",
+      "color": "from-orange-500 to-red-600",
+      "rarity": "Epic"
+    },
+    {
+      "id": "b_perfect_score",
+      "name": "Perfect 100%",
+      "description": "Scored 100% on a timed examination arena test.",
+      "icon": "Award",
+      "color": "from-purple-500 to-pink-600",
+      "rarity": "Rare"
+    },
+    {
+      "id": "b_speed_demon",
+      "name": "Speed Demon",
+      "description": "Completed a comprehensive quiz in under 5 minutes with >90% accuracy.",
+      "icon": "Zap",
+      "color": "from-cyan-400 to-blue-500",
+      "rarity": "Rare"
+    },
+    {
+      "id": "b_code_wizard",
+      "name": "Code Wizard",
+      "description": "Mastered CBSE IT 402 & SQL algorithms.",
+      "icon": "Code",
+      "color": "from-violet-500 to-indigo-700",
+      "rarity": "Epic"
+    },
+    {
+      "id": "b_early_bird",
+      "name": "Early Bird",
+      "description": "Submitted homework ahead of the final deadline.",
+      "icon": "Clock",
+      "color": "from-teal-400 to-cyan-600",
+      "rarity": "Common"
+    },
+    {
+      "id": "b_flashcard_king",
+      "name": "Memory Master",
+      "description": "Mastered flashcards using spaced-repetition memory review.",
+      "icon": "Layers",
+      "color": "from-amber-500 to-yellow-600",
+      "rarity": "Rare"
+    }
+  ],
+  "flashcardDecks": [
+    {
+      "id": "deck_cbse_maths_10",
+      "title": "CBSE Class 10 Maths: Essential Board Formulas",
+      "subject": "Maths",
+      "cardsCount": 4,
+      "cards": [
+        {
+          "id": "fc_m_1",
+          "front": "What are the three fundamental Pythagorean Trigonometric Identities in CBSE Class 10?",
+          "back": "1. \\sin^2\\theta + \\cos^2\\theta = 1\n2. 1 + \\tan^2\\theta = \\sec^2\\theta\n3. 1 + \\cot^2\\theta = \\csc^2\\theta",
+          "difficulty": "good",
+          "lastReviewed": "2026-09-02T10:00:00.000Z"
+        },
+        {
+          "id": "fc_m_2",
+          "front": "What is the Quadratic Formula for roots of \\(ax^2 + bx + c = 0\\)?",
+          "back": "\\[ x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\]",
+          "difficulty": "easy",
+          "lastReviewed": "2026-09-02T10:05:00.000Z"
+        },
+        {
+          "id": "fc_m_3",
+          "front": "What is the Volume of a Frustum of a Cone of height \\(h\\) and radii \\(R, r\\)?",
+          "back": "\\[ V = \\frac{1}{3} \\pi h (R^2 + r^2 + Rr) \\]",
+          "difficulty": "good",
+          "lastReviewed": "2026-09-02T10:10:00.000Z"
+        },
+        {
+          "id": "fc_m_4",
+          "front": "State the Basic Proportionality Theorem (Thales's Theorem) in Triangles.",
+          "back": "If a line is drawn parallel to one side of a triangle intersecting the other two sides, it divides the two sides in the same ratio: \\(\\frac{AD}{DB} = \\frac{AE}{EC}\\).",
+          "difficulty": "easy",
+          "lastReviewed": "2026-09-02T10:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "deck_cbse_science_10",
+      "title": "CBSE Class 10 Science: Board Exam Key Principles",
+      "subject": "Science",
+      "cardsCount": 4,
+      "cards": [
+        {
+          "id": "fc_s_1",
+          "front": "State Ohm's Law and its mathematical equation.",
+          "back": "The electric current \\(I\\) through a conductor is directly proportional to the potential difference \\(V\\) across its ends, provided temperature remains constant: \\(V = IR\\).",
+          "difficulty": "again",
+          "lastReviewed": "2026-09-20T08:24:19.299Z"
+        },
+        {
+          "id": "fc_s_2",
+          "front": "What is the difference between Oxidation and Reduction in Chemical Reactions?",
+          "back": "Oxidation is the gain of oxygen or loss of hydrogen/electrons. Reduction is the loss of oxygen or gain of hydrogen/electrons.",
+          "difficulty": "good",
+          "lastReviewed": "2026-09-02T11:05:00.000Z"
+        },
+        {
+          "id": "fc_s_3",
+          "front": "What is the Lens Formula for spherical lenses in Optics?",
+          "back": "\\[ \\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u} \\] where \\(f\\) is focal length, \\(v\\) is image distance, \\(u\\) is object distance.",
+          "difficulty": "good",
+          "lastReviewed": "2026-09-20T08:24:13.187Z"
+        },
+        {
+          "id": "fc_s_4",
+          "front": "What are the raw materials and overall equation for Photosynthesis?",
+          "back": "\\[ 6CO_2 + 6H_2O \\xrightarrow{\\text{Sunlight, Chlorophyll}} C_6H_{12}O_6 + 6O_2 \\] Raw materials: Carbon Dioxide & Water.",
+          "difficulty": "hard",
+          "lastReviewed": "2026-09-20T08:24:16.174Z"
+        }
+      ]
+    },
+    {
+      "id": "deck_gen_1790423460291",
+      "title": "Deck: Ray Optics & Reflection of Light",
+      "subject": "General Study",
+      "cardsCount": 5,
+      "cards": [
+        {
+          "id": "fc_gen_1790423460290_0",
+          "front": "State the Law of Reflection and its geometric condition.",
+          "back": "The angle of incidence equals the angle of reflection (\\(\\theta_i = \\theta_r\\)). Additionally, the incident ray, reflected ray, and normal vector all reside in the same plane.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1790423460290_1",
+          "front": "What is the mirror formula relating focal length \\(f\\), object distance \\(u\\), and image distance \\(v\\)?",
+          "back": "The mirror formula is \\(\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}\\).",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1790423460290_2",
+          "front": "Write the formula for linear magnification \\(m\\) produced by a spherical mirror in terms of heights and distances.",
+          "back": "Linear magnification is given by \\(m = \\frac{h'}{h} = -\\frac{v}{u}\\), where \\(h'\\) is image height, \\(h\\) is object height, \\(v\\) is image distance, and \\(u\\) is object distance.",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1790423460290_3",
+          "front": "Describe the characteristics of images formed by convex mirrors for any object position.",
+          "back": "Convex mirrors always produce images that are virtual, erect, and diminished, regardless of the object's position.",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1790423460291_4",
+          "front": "What image properties are produced by a concave mirror when the object is placed beyond the principal focus?",
+          "back": "The concave mirror produces a real and inverted image.",
+          "difficulty": "hard"
+        }
+      ],
+      "createdAt": "2026-09-26T11:51:00.291Z"
+    },
+    {
+      "id": "deck_gen_1792502538765",
+      "title": "Deck: Ray Optics & Reflection of Light",
+      "subject": "General Study",
+      "cardsCount": 5,
+      "cards": [
+        {
+          "id": "fc_gen_1792502538765_0",
+          "front": "State the two primary laws of reflection.",
+          "back": "1. The angle of incidence equals the angle of reflection (\\(\\theta_i = \\theta_r\\)). 2. The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence all lie in the same plane.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792502538765_1",
+          "front": "What is the mirror formula relating focal length \\(f\\), image distance \\(v\\), and object distance \\(u\\)?",
+          "back": "The mirror formula is \\(\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}\\).",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792502538765_2",
+          "front": "Define linear magnification \\(m\\) for a spherical mirror in terms of object and image coordinates.",
+          "back": "Linear magnification is the ratio of image height \\(h'\\) to object height \\(h\\), represented as \\(m = \\frac{h'}{h} = -\\frac{v}{u}\\).",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792502538765_3",
+          "front": "What type of image is consistently formed by a convex mirror regardless of object position?",
+          "back": "A convex mirror always forms a virtual, erect, and diminished image.",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792502538765_4",
+          "front": "Under what condition does a concave mirror produce a real and inverted image?",
+          "back": "A concave mirror produces a real and inverted image when the object is positioned beyond the principal focus.",
+          "difficulty": "hard"
+        }
+      ],
+      "createdAt": "2026-10-20T13:22:18.765Z"
+    },
+    {
+      "id": "deck_gen_1792502712132",
+      "title": "Deck: Ray Optics & Reflection of Light",
+      "subject": "General Study",
+      "cardsCount": 5,
+      "cards": [
+        {
+          "id": "fc_gen_1792502712132_0",
+          "front": "What are the two core principles of the Law of Reflection?",
+          "back": "1. The angle of incidence equals the angle of reflection (\\(\\theta_i = \\theta_r\\)). 2. The incident ray, reflected ray, and normal to the boundary lie in the same plane.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792502712132_1",
+          "front": "What is the mirror formula relating focal length \\(f\\), object distance \\(u\\), and image distance \\(v\\)?",
+          "back": "The mirror formula is \\(\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}\\).",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792502712132_2",
+          "front": "How is linear magnification \\(m\\) defined for spherical mirrors in terms of heights and distances?",
+          "back": "Linear magnification is defined as the ratio of image height to object height: \\(m = \\frac{h'}{h} = -\\frac{v}{u}\\).",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792502712132_3",
+          "front": "What type of image is formed when an object is placed beyond the principal focus of a concave mirror?",
+          "back": "The concave mirror forms a real and inverted image.",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792502712132_4",
+          "front": "What image characteristics are always produced by a convex mirror regardless of object position?",
+          "back": "Convex mirrors always produce virtual, erect, and diminished images.",
+          "difficulty": "hard"
+        }
+      ],
+      "createdAt": "2026-10-20T13:25:12.132Z"
+    }
+  ],
+  "whiteboardSavedNotes": []
+}
