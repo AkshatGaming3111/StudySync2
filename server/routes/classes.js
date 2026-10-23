@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const store = require('../data/store');
-const { sanitizeUser } = require('../services/authHelper');
+const { sanitizeUser, hashPassword } = require('../services/authHelper');
 const { verifyToken, requireTeacher } = require('../middleware/auth');
 
 // Helper to generate unique 6-char room code
@@ -105,6 +105,18 @@ router.post('/', verifyToken, requireTeacher, (req, res) => {
   }
 
   const teacher = store.findById('users', teacherId);
+  const teacherPlan = teacher?.plan || 'free';
+  const existingClasses = (store.get('classes') || []).filter(c => c.teacherId === teacherId);
+
+  // Enforce Free Tier limitation (Max 2 classes)
+  if (teacherPlan === 'free' && existingClasses.length >= 2) {
+    return res.status(403).json({
+      success: false,
+      code: 'PLAN_LIMIT_REACHED',
+      error: 'Free Starter plan is limited to 2 active classrooms. Upgrade to StudySync Pro or Institute plan to create unlimited classrooms.'
+    });
+  }
+
   const code = generateRoomCode();
 
   const themeColors = ['indigo', 'emerald', 'purple', 'rose', 'amber', 'cyan'];
@@ -128,6 +140,7 @@ router.post('/', verifyToken, requireTeacher, (req, res) => {
     themeColor: themeColor || themeColors[Math.floor(Math.random() * themeColors.length)],
     bannerImage: bannerImage || defaultBanners[Math.floor(Math.random() * defaultBanners.length)],
     studentIds: [],
+    institute: teacher?.institute || null,
     schedule: schedule || 'Mon, Wed • 11:00 AM - 12:30 PM',
     roomLocation: roomLocation || 'Virtual Room ' + code,
     createdAt: new Date().toISOString(),
@@ -301,6 +314,94 @@ router.post('/:classId/stream/:postId/react', verifyToken, (req, res) => {
 
   store.update('classes', classItem.id, { stream });
   res.json({ success: true, reactions: post.reactions });
+});
+
+// Bulk Enroll Students via CSV or email list (Teacher / Institute Tier)
+router.post('/:id/bulk-enroll', verifyToken, requireTeacher, (req, res) => {
+  const classItem = store.findById('classes', req.params.id);
+  if (!classItem) {
+    return res.status(404).json({ success: false, error: 'Class not found' });
+  }
+
+  // Verify ownership
+  if (classItem.teacherId !== req.user.id && req.user.role !== 'admin') {
+    return res.status(403).json({ success: false, error: 'Not authorized to manage this classroom roster.' });
+  }
+
+  const { students = [] } = req.body;
+  if (!Array.isArray(students) || students.length === 0) {
+    return res.status(400).json({ success: false, error: 'Please provide a list of students to enroll.' });
+  }
+
+  const existingUsers = store.get('users');
+  const currentStudentIds = new Set(classItem.studentIds || []);
+  let newlyEnrolledCount = 0;
+  let newlyCreatedAccounts = 0;
+
+  students.forEach(item => {
+    const email = (typeof item === 'string' ? item : item.email || '').trim().toLowerCase();
+    const name = (typeof item === 'object' && item.name ? item.name : email.split('@')[0] || 'Student').trim();
+    if (!email) return;
+
+    let user = existingUsers.find(u => u.email && u.email.toLowerCase() === email);
+
+    if (!user) {
+      // Create new student account with default temporary credentials
+      const { salt, hash } = hashPassword('Welcome@123');
+      const newUserId = `u_stu_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
+      user = {
+        id: newUserId,
+        email,
+        name,
+        role: 'student',
+        passwordSalt: salt,
+        passwordHash: hash,
+        gradeClass: classItem.gradeLevel || 'Grade 10',
+        section: (item.section || 'A').toUpperCase(),
+        avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(name)}`,
+        xp: 100,
+        level: 1,
+        streak: 1,
+        badges: ['Classroom Pioneer'],
+        joinedClasses: [classItem.id],
+        institute: classItem.institute || null,
+        createdAt: new Date().toISOString()
+      };
+      store.insert('users', user);
+      newlyCreatedAccounts++;
+    } else {
+      // Update joinedClasses if not present
+      const joined = new Set(user.joinedClasses || []);
+      if (!joined.has(classItem.id)) {
+        joined.add(classItem.id);
+        store.update('users', user.id, { joinedClasses: Array.from(joined) });
+      }
+    }
+
+    if (!currentStudentIds.has(user.id)) {
+      currentStudentIds.add(user.id);
+      newlyEnrolledCount++;
+    }
+  });
+
+  // Persist updated roster in class
+  store.update('classes', classItem.id, { studentIds: Array.from(currentStudentIds) });
+
+  // Get sanitized roster
+  const allUsers = store.get('users');
+  const updatedStudents = Array.from(currentStudentIds).map(sid => {
+    const u = allUsers.find(user => user.id === sid);
+    return u ? sanitizeUser(u, false) : { id: sid, name: 'Student', role: 'student' };
+  });
+
+  res.json({
+    success: true,
+    message: `Successfully enrolled ${newlyEnrolledCount} student(s) (${newlyCreatedAccounts} new accounts created).`,
+    enrolledCount: newlyEnrolledCount,
+    newlyCreatedAccounts,
+    totalRosterCount: currentStudentIds.size,
+    students: updatedStudents
+  });
 });
 
 module.exports = router;

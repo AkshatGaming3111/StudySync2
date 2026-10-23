@@ -58,6 +58,7 @@ export const api = {
     getById: (id) => request(`/classes/${id}`),
     create: (classData) => request('/classes', { method: 'POST', body: classData }),
     join: (code, studentId) => request('/classes/join', { method: 'POST', body: { code, studentId } }),
+    bulkEnroll: (classId, students) => request(`/classes/${classId}/bulk-enroll`, { method: 'POST', body: { students } }),
     postStream: (classId, postData) => request(`/classes/${classId}/stream`, { method: 'POST', body: postData }),
     addComment: (classId, postId, commentData) => request(`/classes/${classId}/stream/${postId}/comments`, { method: 'POST', body: commentData }),
     react: (classId, postId, emoji) => request(`/classes/${classId}/stream/${postId}/react`, { method: 'POST', body: { emoji } }),
@@ -111,5 +112,20 @@ export const api = {
     rateFlashcard: (deckId, cardId, rating, userId) => request(`/ai/flashcards/${deckId}/card/${cardId}/rate`, { method: 'POST', body: { rating, userId } }),
     getApiKeyStatus: () => request('/ai/config/key'),
     setApiKey: (key) => request('/ai/config/key', { method: 'POST', body: { key } }),
+  },
+
+  // Commercial Billing & Subscriptions
+  billing: {
+    getPlans: () => request('/billing/plans'),
+    getStatus: () => request('/billing/status'),
+    checkout: (data) => request('/billing/checkout', { method: 'POST', body: data }),
+    cancel: () => request('/billing/cancel', { method: 'POST' }),
+    updateInstituteBranding: (branding) => request('/billing/institute/branding', { method: 'POST', body: branding }),
+  },
+
+  // Diagnostic Parent Reports & Transcripts
+  reports: {
+    getStudentReport: (studentId) => request(`/reports/student/${studentId}`),
+    shareStudentReport: (studentId, shareData) => request(`/reports/student/${studentId}/share`, { method: 'POST', body: shareData }),
   }
 };

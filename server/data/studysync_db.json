@@ -50,7 +50,7 @@
         "c_it_tech",
         "c_1788421696602"
       ],
-      "xp": 3010,
+      "xp": 3100,
       "level": 11,
       "streak": 4,
       "badges": [
@@ -92,7 +92,7 @@
         "c_1792499462501"
       ],
       "joinedClasses": [],
-      "xp": 1366,
+      "xp": 1391,
       "level": 5,
       "streak": 1,
       "badges": [
@@ -110,39 +110,6 @@
         "flashcardsMastered": 0
       },
       "geminiApiKey": ""
-    },
-    {
-      "id": "u_1792131885743",
-      "name": "Canada ka papa",
-      "email": "vanshbosss12111@gmail.com",
-      "salt": "2e44c3f45258a6758961d58be2dd604e",
-      "hash": "c0e0e82b2f939134d96317322cfca0c57ce41d6e6eee86c28c6780f81847d131e104f00235d2c1f1aa773f14d87a83ad3701a58b3ff25487c666aaf53ca79477",
-      "role": "student",
-      "gradeClass": "Grade 10",
-      "section": "B",
-      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Canada%20ka%20papa&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
-      "bio": "Student • Grade 10 Section B",
-      "createdClasses": [],
-      "joinedClasses": [
-        "c_science_physics",
-        "c_maths_geom",
-        "c_it_tech",
-        "c_1788421696602"
-      ],
-      "xp": 170,
-      "level": 1,
-      "streak": 1,
-      "badges": [
-        "b_founder"
-      ],
-      "createdAt": "2026-10-16T06:24:45.743Z",
-      "stats": {
-        "assignmentsCompleted": 0,
-        "quizzesCompleted": 0,
-        "averageQuizScore": 0,
-        "studyHours": 0,
-        "flashcardsMastered": 0
-      }
     },
     {
       "id": "u_1792132266814",
@@ -206,6 +173,39 @@
         "studyHours": 0,
         "flashcardsMastered": 0
       }
+    },
+    {
+      "id": "u_1792735609635",
+      "name": "vansh singh",
+      "email": "vanshbosss12111@gmail.com",
+      "salt": "42e85cecdf7994454cdd16d07680ed22",
+      "hash": "59d5a786d9684325d22ca9684e8053a290eeb069f0625bf2b0d733a7bc9af28b2398fd0785d7ad98232d4d638202db68ce7443bdbe5e6855372167da2ea38df4",
+      "role": "student",
+      "gradeClass": "Grade 10",
+      "section": "B",
+      "avatar": "https://api.dicebear.com/7.x/notionists/svg?seed=vansh%20singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+      "bio": "Student • Grade 10 Section B",
+      "createdClasses": [],
+      "joinedClasses": [
+        "c_science_physics",
+        "c_maths_geom",
+        "c_it_tech",
+        "c_1788421696602"
+      ],
+      "xp": 150,
+      "level": 1,
+      "streak": 1,
+      "badges": [
+        "b_founder"
+      ],
+      "createdAt": "2026-10-23T06:06:49.635Z",
+      "stats": {
+        "assignmentsCompleted": 0,
+        "quizzesCompleted": 0,
+        "averageQuizScore": 0,
+        "studyHours": 0,
+        "flashcardsMastered": 0
+      }
     }
   ],
   "classes": [
@@ -224,7 +224,8 @@
       "studentIds": [
         "u_1788164009030",
         "u_1792132266814",
-        "u_1792131885743"
+        "u_1792131885743",
+        "u_1792735609635"
       ],
       "schedule": "Mon, Wed, Fri • 9:00 AM - 10:30 AM",
       "roomLocation": "Science Lab 101",
@@ -270,7 +271,8 @@
       "studentIds": [
         "u_1788164009030",
         "u_1792132266814",
-        "u_1792131885743"
+        "u_1792131885743",
+        "u_1792735609635"
       ],
       "schedule": "Tue, Thu • 10:45 AM - 12:15 PM",
       "roomLocation": "Mathematics Wing 204",
@@ -310,7 +312,8 @@
       "studentIds": [
         "u_1788164009030",
         "u_1792132266814",
-        "u_1792131885743"
+        "u_1792131885743",
+        "u_1792735609635"
       ],
       "schedule": "Wed, Fri • 1:30 PM - 3:00 PM",
       "roomLocation": "Computer Lab Alpha",
@@ -369,13 +372,27 @@
       "studentIds": [
         "u_1788164009030",
         "u_1792132266814",
-        "u_1792131885743"
+        "u_1792131885743",
+        "u_1792735609635"
       ],
       "schedule": "Mon, Wed, Fri • 10:00 AM - 11:30 AM",
       "roomLocation": "Virtual Lab Alpha / Room 302",
       "createdAt": "2026-09-03T07:48:16.602Z",
       "aiTutorPersona": "Deep Learning Research Coach",
       "stream": [
+        {
+          "id": "post_1792735922972",
+          "authorId": "u_1788421637423",
+          "authorName": "Akshat Singh",
+          "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+          "authorRole": "teacher",
+          "title": "Classroom Discussion",
+          "content": "helloo",
+          "attachments": [],
+          "createdAt": "2026-10-23T06:12:02.972Z",
+          "reactions": {},
+          "comments": []
+        },
         {
           "id": "post_1792064453003",
           "authorId": "u_1788164009030",
@@ -962,6 +979,86 @@
           "explanation": "PRICER stands for Protect, Rest, Ice, Compress, Elevate, and Refer — the standard acute sports injury treatment protocol."
         }
       ]
+    },
+    {
+      "title": "Grade 10 Mathematics - Real Numbers Quiz",
+      "topic": "Chapter 1: Real Numbers (Fundamental Theorem of Arithmetic, Proofs of Irrationality of √2, √3, √5)",
+      "difficulty": "Medium",
+      "timeLimitMinutes": 15,
+      "questions": [
+        {
+          "id": "q_1",
+          "type": "mcq",
+          "question": "What is the Prime Factorization of the number 5040?",
+          "options": [
+            "2^4 × 3^2 × 5 × 7",
+            "2^3 × 3^3 × 5 × 7",
+            "2^4 × 3 × 5^2 × 7",
+            "2^5 × 3^2 × 7"
+          ],
+          "correctAnswer": 0,
+          "explanation": "To find the prime factorization of 5040: 5040 ÷ 2 = 2520, 2520 ÷ 2 = 1260, 1260 ÷ 2 = 630, 630 ÷ 2 = 315, 315 ÷ 3 = 105, 105 ÷ 3 = 35, 35 ÷ 5 = 7, 7 ÷ 7 = 1. Thus, 5040 = 2^4 × 3^2 × 5^1 × 7^1."
+        },
+        {
+          "id": "q_2",
+          "type": "mcq",
+          "question": "Given that HCF(306, 657) = 9, find the LCM(306, 657).",
+          "options": [
+            "22338",
+            "22238",
+            "21933",
+            "22392"
+          ],
+          "correctAnswer": 0,
+          "explanation": "We know that for any two positive integers $a$ and $b$, $\text{HCF}(a, b) \times \text{LCM}(a, b) = a \times b$. Therefore, $\text{LCM}(306, 657) = \frac{306 \times 657}{\text{HCF}(306, 657)} = \frac{306 \times 657}{9} = 34 \times 657 = 22338$."
+        },
+        {
+          "id": "q_3",
+          "type": "mcq",
+          "question": "Which of the following numbers is irrational based on the standard proofs of irrationality?",
+          "options": [
+            "3 + 2√5",
+            "√(9/16)",
+            "3.1416",
+            "√4 + √9"
+          ],
+          "correctAnswer": 0,
+          "explanation": "3 + 2√5 is the sum of a rational number (3) and an irrational number (2√5), which is always irrational. √(9/16) = 3/4 (rational), 3.1416 is terminating (rational), and √4 + √9 = 2 + 3 = 5 (rational)."
+        },
+        {
+          "id": "q_4",
+          "type": "mcq",
+          "question": "According to the Fundamental Theorem of Arithmetic, every composite number can be expressed as a product of primes, and this factorization is unique, apart from:",
+          "options": [
+            "the order in which the prime factors occur",
+            "the values of the prime factors themselves",
+            "the sign of the integers",
+            "the number of prime factors"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The Fundamental Theorem of Arithmetic states that every composite number can be factorized as a product of prime numbers, and this factorization is unique, except for the order in which the prime factors occur (e.g., 2 × 3 = 3 × 2)."
+        },
+        {
+          "id": "q_5",
+          "type": "mcq",
+          "question": "In a proof by contradiction showing that √3 is irrational, what initial assumption is typically made?",
+          "options": [
+            "√3 is a rational number of the form a/b where a and b are co-prime integers and b ≠ 0.",
+            "√3 is a composite number.",
+            "√3 can be expressed as a terminating decimal.",
+            "√3 is equal to the square of an integer."
+          ],
+          "correctAnswer": 0,
+          "explanation": "The standard proof by contradiction starts by assuming the opposite of what is to be proved—that √3 is a rational number, meaning it can be written as a/b in its simplest form where a and b are co-prime integers and b ≠ 0."
+        }
+      ],
+      "id": "test_ai_1792736062507",
+      "totalPoints": 100,
+      "xpReward": 250,
+      "createdAt": "2026-10-23T06:14:22.507Z",
+      "classId": "c_1788421696602",
+      "gradeLevel": "Grade 10",
+      "subject": "Maths"
     }
   ],
   "testResults": [

@@ -20,7 +20,10 @@ import {
   Sigma,
   ChevronRight,
   Mic,
-  Headphones
+  Headphones,
+  Building2,
+  Check,
+  CreditCard
 } from 'lucide-react';
 import LaTeXRenderer from '../components/Common/LaTeXRenderer';
 import SlidingBackground from '../components/Common/SlidingBackground';
@@ -430,6 +433,119 @@ export default function LandingPage({ onOpenAuth, onOpenSignIn, onOpenRegister }
               className="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-xs shadow-md shadow-brand-500/20 active:scale-95 transition-all"
             >
               Sign Up as Student
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Commercial Pricing Plans Section */}
+      <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10 space-y-12">
+        <div className="text-center space-y-3 max-w-2xl mx-auto">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-brand-400">
+            Commercial Tier Plans
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            Predictable, Transparent Academic Pricing
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-400">
+            Start free or empower your entire coaching institute with full white-labeled branding and unlimited intelligence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Plan 1: Free Starter */}
+          <div className="p-8 rounded-3xl bg-gray-900/60 border border-white/10 flex flex-col justify-between space-y-6 hover:border-white/20 transition-all">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-black text-white">Free Starter</h3>
+                <span className="text-xs font-mono font-bold text-gray-400">🌱 Free</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                Ideal for exploring smart classrooms and participating in live lectures.
+              </p>
+              <div className="pt-2">
+                <span className="text-3xl font-black text-white">₹0</span>
+                <span className="text-xs text-gray-500 font-semibold"> / forever</span>
+              </div>
+              <ul className="space-y-2.5 border-t border-white/10 pt-4 text-xs text-gray-300">
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Join up to 2 active classrooms</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> 10 StudyBot AI queries / day</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Interactive SyncBoard drawing canvas</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Class streams, homework & exams</li>
+              </ul>
+            </div>
+            <button
+              onClick={() => onOpenRegister ? onOpenRegister() : onOpenAuth('register')}
+              className="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors"
+            >
+              Get Started Free
+            </button>
+          </div>
+
+          {/* Plan 2: Pro Scholar */}
+          <div className="relative p-8 rounded-3xl bg-gradient-to-b from-brand-500/20 via-indigo-500/10 to-gray-900 border-2 border-brand-500 shadow-2xl shadow-brand-500/20 flex flex-col justify-between space-y-6">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-brand-500 to-indigo-600 text-white text-[10px] font-black uppercase tracking-wider shadow-md">
+              Most Popular
+            </span>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-black text-white">StudySync Pro</h3>
+                <span className="text-xs font-mono font-bold text-amber-400">⚡ Pro Scholar</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                Unlimited AI tutoring, LaTeX formula solving, and certified parent diagnostic cards.
+              </p>
+              <div className="pt-2">
+                <span className="text-3xl font-black text-white">₹399</span>
+                <span className="text-xs text-gray-400 font-semibold"> / month</span>
+                <span className="block text-[11px] text-emerald-400 font-bold mt-0.5">₹3,499 / year (Save 27%)</span>
+              </div>
+              <ul className="space-y-2.5 border-t border-white/10 pt-4 text-xs text-gray-200">
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Unlimited virtual classrooms</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Unlimited StudyBot AI 24/7</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> SyncBoard Multimodal AI OCR & LaTeX</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Infinite AI Exam Arena mock tests</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Parent Diagnostic Report Card (PDF)</li>
+              </ul>
+            </div>
+            <button
+              onClick={() => onOpenRegister ? onOpenRegister() : onOpenAuth('register')}
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-600 text-white font-bold text-xs shadow-md shadow-brand-500/20 active:scale-95 transition-all"
+            >
+              Start Pro Experience
+            </button>
+          </div>
+
+          {/* Plan 3: Institute & Academy */}
+          <div className="p-8 rounded-3xl bg-gray-900/60 border border-white/10 flex flex-col justify-between space-y-6 hover:border-white/20 transition-all">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-black text-white">Institute & Academy</h3>
+                <span className="text-xs font-mono font-bold text-indigo-400">🏛️ Enterprise</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                Complete white-label solution with custom academy logo, branding, and CSV student onboarding.
+              </p>
+              <div className="pt-2">
+                <span className="text-3xl font-black text-white">₹2,999</span>
+                <span className="text-xs text-gray-400 font-semibold"> / month</span>
+                <span className="block text-[11px] text-emerald-400 font-bold mt-0.5">₹24,999 / year (Save ~30%)</span>
+              </div>
+              <ul className="space-y-2.5 border-t border-white/10 pt-4 text-xs text-gray-300">
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Full Pro features for all faculty</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> White-Label Institute Branding (Logo, Colors)</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> 1-Click CSV Bulk Student Roster Import</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Automated Parent WhatsApp Progress Alert</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400 flex-shrink-0" /> Official Certified Report Watermarking</li>
+              </ul>
+            </div>
+            <button
+              onClick={() => onOpenRegister ? onOpenRegister() : onOpenAuth('register')}
+              className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md shadow-indigo-600/20 transition-colors"
+            >
+              Get Institute License
             </button>
           </div>
 

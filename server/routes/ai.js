@@ -25,6 +25,33 @@ router.post('/chat', async (req, res) => {
 
   const apiKey = resolveApiKey(req, userId);
 
+  // Check Commercial Plan Usage Quota if user is using default server quota (no personal API key provided)
+  let userRecord = null;
+  const today = new Date().toISOString().slice(0, 10);
+  if (!apiKey && userId) {
+    userRecord = store.findById('users', userId);
+    if (userRecord) {
+      const plan = userRecord.plan || 'free';
+      if (plan === 'free') {
+        const usage = userRecord.usage || { aiQueriesToday: 0, lastResetDate: today };
+        if (usage.lastResetDate !== today) {
+          usage.aiQueriesToday = 0;
+          usage.lastResetDate = today;
+        }
+
+        if (usage.aiQueriesToday >= 10) {
+          return res.status(403).json({
+            success: false,
+            code: 'AI_QUOTA_EXCEEDED',
+            error: 'You have reached your Free Tier daily AI query limit (10 queries/day). Upgrade to StudySync Pro for unlimited queries or provide your own Gemini API key in Settings.',
+            limit: 10,
+            used: usage.aiQueriesToday
+          });
+        }
+      }
+    }
+  }
+
   try {
     const response = await aiEngine.generateChatResponse({
       message,
@@ -33,6 +60,18 @@ router.post('/chat', async (req, res) => {
       persona: persona || 'Socratic Coding Mentor',
       apiKey
     });
+
+    // Update daily usage stats for user
+    if (userRecord) {
+      const currentUsage = userRecord.usage || { aiQueriesToday: 0, lastResetDate: today };
+      if (currentUsage.lastResetDate !== today) {
+        currentUsage.aiQueriesToday = 1;
+        currentUsage.lastResetDate = today;
+      } else {
+        currentUsage.aiQueriesToday = (currentUsage.aiQueriesToday || 0) + 1;
+      }
+      store.update('users', userRecord.id, { usage: currentUsage });
+    }
 
     // Award minor XP for asking insightful study questions
     if (userId) {

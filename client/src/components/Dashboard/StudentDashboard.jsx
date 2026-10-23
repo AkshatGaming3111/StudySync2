@@ -8,6 +8,7 @@ import LaTeXRenderer from '../Common/LaTeXRenderer';
 import LiveExamModal from '../Testing/LiveExamModal';
 import TestResultModal from '../Testing/TestResultModal';
 import SubmissionModal from '../Homework/SubmissionModal';
+import { useCommercial } from '../../context/CommercialContext';
 import {
   Sparkles,
   BookOpen,
@@ -43,6 +44,7 @@ export default function StudentDashboard({
   const navigate = useNavigate();
   const { currentUser } = useAuth();
   const { classes, activeClass, selectClass } = useClass();
+  const { openReport, openPricing } = useCommercial();
 
   const handleNavigate = (tab) => {
     const routeMap = {
@@ -171,6 +173,15 @@ export default function StudentDashboard({
             >
               <Hash className="w-4 h-4 text-indigo-300" />
               <span>Join Class with Code</span>
+            </button>
+
+            <button
+              onClick={() => openReport(currentUser?.id)}
+              className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-amber-500/90 hover:bg-amber-500 text-white font-extrabold border border-amber-300/30 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-md shadow-amber-500/20"
+              title="Generate comprehensive Parent Diagnostic Report Card"
+            >
+              <FileText className="w-4 h-4 text-white" />
+              <span>Parent Diagnostic Report Card</span>
             </button>
           </div>
         </div>

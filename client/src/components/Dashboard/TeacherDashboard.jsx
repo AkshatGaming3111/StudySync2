@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useClass } from '../../context/ClassContext';
+import { useCommercial } from '../../context/CommercialContext';
 import { api } from '../../services/api';
 import StatCard from '../Common/StatCard';
 import {
@@ -20,7 +21,9 @@ import {
   Layers,
   GraduationCap,
   Award,
-  Zap
+  Zap,
+  Building2,
+  Upload
 } from 'lucide-react';
 
 export default function TeacherDashboard({
@@ -33,6 +36,7 @@ export default function TeacherDashboard({
   const navigate = useNavigate();
   const { currentUser } = useAuth();
   const { classes, activeClass, selectClass } = useClass();
+  const { openBulkEnroll, openPricing } = useCommercial();
 
   const handleNavigate = (tab) => {
     const routeMap = {
@@ -127,6 +131,16 @@ export default function TeacherDashboard({
               <BookOpen className="w-4 h-4 text-brand-300" />
               <span>New Classroom</span>
             </button>
+
+            {classes.length > 0 && (
+              <button
+                onClick={() => openBulkEnroll(classes[0].id, classes[0].title)}
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-indigo-500/80 hover:bg-indigo-500 text-white font-extrabold border border-indigo-300/30 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-md"
+              >
+                <Upload className="w-4 h-4 text-white" />
+                <span>Bulk Enroll Students (CSV)</span>
+              </button>
+            )}
           </div>
         </div>
 

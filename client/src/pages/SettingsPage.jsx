@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useCommercial } from '../context/CommercialContext';
 import { api } from '../services/api';
 import {
   Settings,
@@ -12,11 +13,17 @@ import {
   RotateCcw,
   Shield,
   Bot,
-  Trash2
+  Trash2,
+  Building2,
+  CreditCard,
+  FileText,
+  Zap,
+  ArrowRight
 } from 'lucide-react';
 
 export default function SettingsPage() {
-  const { currentUser, isTeacher, updateProfile, deleteAccount, triggerXpGain } = useAuth();
+  const { currentUser, isTeacher, updateProfile, deleteAccount, triggerXpGain, refreshUser } = useAuth();
+  const { openPricing, openReport } = useCommercial();
 
   const [apiKey, setApiKey] = useState(currentUser?.geminiApiKey || localStorage.getItem('studysync_gemini_key') || '');
   const [hasKey, setHasKey] = useState(!!(currentUser?.geminiApiKey || localStorage.getItem('studysync_gemini_key')));
@@ -28,8 +35,20 @@ export default function SettingsPage() {
   const [savingProfile, setSavingProfile] = useState(false);
   const [profileMsg, setProfileMsg] = useState('');
 
+  // Institute White-Labeling state
+  const [instituteName, setInstituteName] = useState(currentUser?.institute?.name || '');
+  const [logoUrl, setLogoUrl] = useState(currentUser?.institute?.logoUrl || '');
+  const [brandColor, setBrandColor] = useState(currentUser?.institute?.brandColor || '#4F46E5');
+  const [tagline, setTagline] = useState(currentUser?.institute?.tagline || '');
+  const [website, setWebsite] = useState(currentUser?.institute?.website || '');
+  const [contactEmail, setContactEmail] = useState(currentUser?.institute?.contactEmail || currentUser?.email || '');
+  const [savingBranding, setSavingBranding] = useState(false);
+  const [brandingMsg, setBrandingMsg] = useState('');
+
   const [resetting, setResetting] = useState(false);
   const [resetMsg, setResetMsg] = useState('');
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState('');
 
   useEffect(() => {
     async function checkKey() {
@@ -98,6 +117,31 @@ export default function SettingsPage() {
     }
   };
 
+  const handleSaveBranding = async (e) => {
+    e.preventDefault();
+    setSavingBranding(true);
+    setBrandingMsg('');
+    try {
+      const res = await api.billing.updateInstituteBranding({
+        instituteName,
+        logoUrl,
+        brandColor,
+        tagline,
+        website,
+        contactEmail
+      });
+      if (res.success) {
+        setBrandingMsg('Institute branding saved and propagated across all classrooms!');
+        await refreshUser();
+        setTimeout(() => setBrandingMsg(''), 4000);
+      }
+    } catch (err) {
+      alert(err.message || 'Failed to update institute branding');
+    } finally {
+      setSavingBranding(false);
+    }
+  };
+
   const handleResetDatabase = async () => {
     if (!isTeacher) {
       alert('Database reset is restricted to teacher accounts only.');
@@ -122,9 +166,6 @@ export default function SettingsPage() {
       setResetting(false);
     }
   };
-
-  const [deleting, setDeleting] = useState(false);
-  const [deleteError, setDeleteError] = useState('');
 
   const handleDeleteAccount = async () => {
     if (!currentUser) return;
@@ -266,6 +307,184 @@ export default function SettingsPage() {
           </div>
         </form>
       </div>
+
+      {/* Commercial Subscription & Billing Management */}
+      <div className="p-6 rounded-3xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border shadow-sm space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h4 className="font-bold text-sm text-gray-900 dark:text-white flex items-center gap-2">
+            <CreditCard className="w-4 h-4 text-brand-500" /> Commercial Subscription & Quota
+          </h4>
+          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-800 font-mono">
+            Current: {currentUser?.plan || 'Free Starter'}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs p-4 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5">
+          <div>
+            <span className="text-gray-400">Plan Tier:</span>
+            <p className="font-bold text-gray-900 dark:text-white text-sm capitalize">
+              {currentUser?.plan === 'pro' ? '⚡ StudySync Pro Scholar' : currentUser?.plan === 'institute' ? '🏛️ Institute Enterprise' : '🌱 Free Starter'}
+            </p>
+          </div>
+          <div>
+            <span className="text-gray-400">Daily AI Queries:</span>
+            <p className="font-bold text-brand-600 dark:text-brand-400 text-sm">
+              {currentUser?.plan === 'pro' || currentUser?.plan === 'institute' ? 'Unlimited' : `${currentUser?.usage?.aiQueriesToday || 0} / 10 used today`}
+            </p>
+          </div>
+          <div>
+            <span className="text-gray-400">Auto-Renewal:</span>
+            <p className="font-bold text-gray-700 dark:text-gray-300 text-sm">
+              {currentUser?.subscription?.autoRenew ? 'Active' : 'N/A or Cancelled'}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+          <button
+            type="button"
+            onClick={() => openReport(currentUser.id)}
+            className="px-4 py-2 rounded-xl bg-gray-100 dark:bg-white/10 hover:bg-gray-200 text-gray-800 dark:text-gray-200 font-bold text-xs flex items-center gap-1.5 transition-colors"
+          >
+            <FileText className="w-4 h-4 text-brand-500" />
+            <span>View Diagnostic Report Card</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={openPricing}
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-600 text-white font-bold text-xs shadow-md shadow-brand-500/20 flex items-center gap-2 active:scale-95 transition-all"
+          >
+            <Sparkles className="w-4 h-4" />
+            <span>{currentUser?.plan === 'free' ? 'Upgrade to Pro' : 'Change Plan / Manage Billing'}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Institute White-Labeling Branding Configuration (Teachers & Institute Admins) */}
+      {(isTeacher || currentUser?.plan === 'institute') && (
+        <div className="p-6 rounded-3xl bg-white dark:bg-dark-card border border-indigo-200 dark:border-indigo-900/40 shadow-sm space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h4 className="font-bold text-sm text-gray-900 dark:text-white flex items-center gap-2">
+              <Building2 className="w-4 h-4 text-indigo-500" /> White-Label Institute Branding
+            </h4>
+            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 font-mono">
+              Academy Feature
+            </span>
+          </div>
+
+          <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Customize your school or coaching academy branding. Your logo, name, tagline, and theme color will automatically appear on report cards, navigation bars, and all classroom feeds you direct.
+          </p>
+
+          <form onSubmit={handleSaveBranding} className="space-y-4 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Institute / School Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Apex Global Science Academy"
+                  value={instituteName}
+                  onChange={(e) => setInstituteName(e.target.value)}
+                  required
+                  className="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs text-gray-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Logo Image URL
+                </label>
+                <input
+                  type="url"
+                  placeholder="https://example.com/logo.png"
+                  value={logoUrl}
+                  onChange={(e) => setLogoUrl(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs text-gray-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Academy Tagline / Motto
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Fostering Intellectual Rigor & STEM Discovery"
+                  value={tagline}
+                  onChange={(e) => setTagline(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs text-gray-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Brand Theme Color
+                </label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="color"
+                    value={brandColor}
+                    onChange={(e) => setBrandColor(e.target.value)}
+                    className="w-9 h-9 p-0.5 rounded-lg border border-gray-300 cursor-pointer"
+                  />
+                  <input
+                    type="text"
+                    value={brandColor}
+                    onChange={(e) => setBrandColor(e.target.value)}
+                    className="flex-1 px-3 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs font-mono uppercase"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Official Website
+                </label>
+                <input
+                  type="url"
+                  placeholder="https://academy.edu"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs text-gray-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block font-bold text-xs text-gray-700 dark:text-gray-300 mb-1">
+                  Contact / Admissions Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="contact@academy.edu"
+                  value={contactEmail}
+                  onChange={(e) => setContactEmail(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-dark-surface border border-gray-300 dark:border-dark-border text-xs text-gray-900 dark:text-white"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+              {brandingMsg ? (
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold text-xs flex items-center gap-1">
+                  <CheckCircle2 className="w-4 h-4" /> {brandingMsg}
+                </span>
+              ) : <span />}
+
+              <button
+                type="submit"
+                disabled={savingBranding || !instituteName.trim()}
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md shadow-indigo-600/20 active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                <Building2 className="w-4 h-4" />
+                <span>{savingBranding ? 'Saving Branding...' : 'Update Institute Branding'}</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       {/* Database Management & Seed Reset (Restricted to Teachers Only) */}
       {isTeacher && (

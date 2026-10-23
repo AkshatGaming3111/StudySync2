@@ -52,7 +52,9 @@ function sanitizeUser(user, isOwner = false) {
     level: user.level || 1,
     bio: user.bio || '',
     specialty: user.specialty,
-    stats: user.stats || {}
+    stats: user.stats || {},
+    plan: user.plan || 'free',
+    institute: user.institute || null
   };
 
   if (isOwner) {
@@ -63,7 +65,12 @@ function sanitizeUser(user, isOwner = false) {
       joinedClasses: user.joinedClasses || [],
       streak: user.streak || 0,
       createdAt: user.createdAt,
-      geminiApiKey: user.geminiApiKey || ''
+      geminiApiKey: user.geminiApiKey || '',
+      subscription: user.subscription || null,
+      usage: user.usage || {
+        aiQueriesToday: 0,
+        lastResetDate: new Date().toISOString().slice(0, 10)
+      }
     };
   }
 

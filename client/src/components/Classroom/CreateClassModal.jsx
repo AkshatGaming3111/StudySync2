@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { useClass } from '../../context/ClassContext';
 import { useAuth } from '../../context/AuthContext';
+import { useCommercial } from '../../context/CommercialContext';
 import {
   X,
   BookOpen,
   PlusCircle,
   Sparkles,
-  Bot
+  Bot,
+  AlertCircle
 } from 'lucide-react';
 
 export default function CreateClassModal({ isOpen, onClose }) {
   const { createClass } = useClass();
   const { triggerXpGain } = useAuth();
+  const { openPricing } = useCommercial();
 
   const [title, setTitle] = useState('');
   const [subject, setSubject] = useState('Computer Science');
@@ -21,6 +24,7 @@ export default function CreateClassModal({ isOpen, onClose }) {
   const [roomLocation, setRoomLocation] = useState('Virtual Lab Alpha / Room 302');
   const [aiTutorPersona, setAiTutorPersona] = useState('Socratic Coding Mentor');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   if (!isOpen) return null;
 
@@ -29,6 +33,7 @@ export default function CreateClassModal({ isOpen, onClose }) {
     if (!title.trim() || !subject.trim()) return;
 
     setLoading(true);
+    setError(null);
     try {
       await createClass({
         title: title.trim(),
@@ -47,6 +52,7 @@ export default function CreateClassModal({ isOpen, onClose }) {
       onClose();
     } catch (err) {
       console.error('Failed to create class:', err);
+      setError(err.message || 'Failed to create classroom');
     } finally {
       setLoading(false);
     }
@@ -71,6 +77,31 @@ export default function CreateClassModal({ isOpen, onClose }) {
             <X className="w-5 h-5" />
           </button>
         </div>
+
+        {/* Error / Plan Limit Alert */}
+        {error && (
+          <div className="m-4 p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800/60 text-amber-800 dark:text-amber-200 text-xs space-y-2">
+            <div className="flex items-start gap-2">
+              <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <p className="font-bold">{error}</p>
+                {error.includes('Free Starter plan is limited') && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onClose();
+                      openPricing();
+                    }}
+                    className="mt-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-extrabold text-[11px] shadow-sm flex items-center gap-1.5"
+                  >
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Upgrade to Pro (Unlimited Classrooms)</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-4 text-xs">

@@ -10,14 +10,20 @@ import {
   Settings,
   Layers,
   Users,
-  LogOut
+  LogOut,
+  Sparkles,
+  Zap,
+  Building2,
+  FileText
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useClass } from '../context/ClassContext';
+import { useCommercial } from '../context/CommercialContext';
 
 export default function Sidebar({ activeTab: legacyActiveTab, setActiveTab: legacySetActiveTab }) {
   const { currentUser, isTeacher, logout } = useAuth();
   const { activeClass } = useClass();
+  const { openPricing, openReport } = useCommercial();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -128,6 +134,69 @@ export default function Sidebar({ activeTab: legacyActiveTab, setActiveTab: lega
             <p className="text-[11px] text-gray-500 dark:text-gray-400">{activeClass.schedule}</p>
           </div>
         )}
+
+        {/* Commercial Plan / AI Quota Widget */}
+        <div className="pt-2">
+          {currentUser?.plan === 'pro' ? (
+            <div className="p-3.5 rounded-2xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/25 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-black uppercase tracking-wider text-amber-600 dark:text-amber-400 flex items-center gap-1 font-mono">
+                  <Zap className="w-3.5 h-3.5 fill-amber-500" /> Pro Scholar
+                </span>
+                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">
+                  Unlimited AI
+                </span>
+              </div>
+              <button
+                onClick={() => openReport(currentUser.id)}
+                className="w-full py-1.5 px-2 rounded-xl bg-white/80 dark:bg-white/10 hover:bg-white text-[11px] font-bold text-gray-800 dark:text-gray-200 flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              >
+                <FileText className="w-3.5 h-3.5 text-brand-500" />
+                <span>My Diagnostic Report</span>
+              </button>
+            </div>
+          ) : currentUser?.plan === 'institute' ? (
+            <div className="p-3.5 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/25 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400 flex items-center gap-1 font-mono">
+                  <Building2 className="w-3.5 h-3.5 text-indigo-500" /> Institute Partner
+                </span>
+              </div>
+              <p className="text-[11px] text-gray-500 dark:text-gray-400 font-medium truncate">
+                {currentUser.institute?.name || 'White-Label License'}
+              </p>
+              <button
+                onClick={() => openReport(currentUser.id)}
+                className="w-full py-1.5 px-2 rounded-xl bg-white/80 dark:bg-white/10 hover:bg-white text-[11px] font-bold text-gray-800 dark:text-gray-200 flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              >
+                <FileText className="w-3.5 h-3.5 text-indigo-500" />
+                <span>Diagnostic Report</span>
+              </button>
+            </div>
+          ) : (
+            <div className="p-3.5 rounded-2xl bg-gradient-to-br from-brand-500/10 via-purple-500/5 to-transparent border border-brand-500/20 space-y-2">
+              <div className="flex items-center justify-between text-[10px] font-bold">
+                <span className="text-gray-500 dark:text-gray-400">Daily AI Queries</span>
+                <span className="font-mono text-brand-600 dark:text-brand-400">
+                  {currentUser?.usage?.aiQueriesToday || 0} / 10
+                </span>
+              </div>
+              <div className="w-full h-1.5 rounded-full bg-gray-200 dark:bg-white/10 overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-brand-500 to-indigo-500 rounded-full"
+                  style={{ width: `${Math.min(100, ((currentUser?.usage?.aiQueriesToday || 0) / 10) * 100)}%` }}
+                />
+              </div>
+              <button
+                onClick={openPricing}
+                className="w-full py-1.5 px-2 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-600 text-white text-[11px] font-black flex items-center justify-center gap-1 shadow-sm shadow-brand-500/20 active:scale-98 transition-all"
+              >
+                <Sparkles className="w-3 h-3" />
+                <span>Upgrade to Pro</span>
+              </button>
+            </div>
+          )}
+        </div>
 
       </div>
 

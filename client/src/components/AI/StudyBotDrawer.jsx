@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useClass } from '../../context/ClassContext';
+import { useCommercial } from '../../context/CommercialContext';
 import { api } from '../../services/api';
 import LaTeXRenderer from '../Common/LaTeXRenderer';
 import {
@@ -42,6 +43,7 @@ import {
 export default function StudyBotDrawer({ isOpen, onClose }) {
   const { currentUser, updateProfile, triggerXpGain } = useAuth();
   const { activeClass } = useClass();
+  const { openPricing } = useCommercial();
 
   const [apiKey, setApiKey] = useState(currentUser?.geminiApiKey || localStorage.getItem('studysync_gemini_key') || '');
   const [showKeyInput, setShowKeyInput] = useState(false);
@@ -390,14 +392,18 @@ export default function StudyBotDrawer({ isOpen, onClose }) {
       }
     } catch (err) {
       console.error('Failed to get AI response:', err);
+      const isQuota = err.message && (err.message.includes('Free Tier daily AI query limit') || err.message.includes('AI_QUOTA_EXCEEDED'));
       setMessages(prev => [
         ...prev,
         {
           id: `err_${Date.now()}`,
           role: 'assistant',
-          text: `⚠️ **API Error**: Could not connect to Google Gemini. Please ensure your API key is valid and has active quota.`,
+          text: isQuota
+            ? `⚠️ **Daily Free AI Quota Reached (10 Queries/Day)**\n\nYou have used all 10 free AI tutoring queries for today on the Free Starter plan.\n\n⚡ Upgrade to **StudySync Pro** for unlimited 24/7 AI tutoring across all personas, or connect your personal Google Gemini API Key from Google AI Studio.`
+            : `⚠️ **API Error**: ${err.message || 'Could not connect to AI engine.'}`,
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-          isLiveGemini: false
+          isLiveGemini: false,
+          isQuotaError: isQuota
         }
       ]);
     } finally {
@@ -664,6 +670,26 @@ export default function StudyBotDrawer({ isOpen, onClose }) {
                   >
                     <LaTeXRenderer content={msg.text} />
                   </div>
+
+                  {/* Quota Exceeded Interactive Upgrade Action Bar */}
+                  {msg.isQuotaError && (
+                    <div className="flex flex-wrap items-center gap-2 pt-1">
+                      <button
+                        onClick={openPricing}
+                        className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 text-white font-extrabold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition-transform active:scale-95"
+                      >
+                        <Sparkles className="w-3.5 h-3.5" />
+                        <span>Upgrade to StudySync Pro</span>
+                      </button>
+                      <button
+                        onClick={() => setShowKeyInput(true)}
+                        className="px-3 py-1.5 rounded-xl bg-gray-200 dark:bg-white/10 hover:bg-gray-300 text-gray-800 dark:text-gray-200 font-bold text-xs flex items-center gap-1.5 transition-colors"
+                      >
+                        <Key className="w-3.5 h-3.5" />
+                        <span>Connect Own API Key</span>
+                      </button>
+                    </div>
+                  )}
 
                   <div className={`flex items-center gap-2 text-[10px] text-gray-400 px-1 ${isBot ? 'justify-between' : 'justify-end'}`}>
                     <div className="flex items-center gap-2">

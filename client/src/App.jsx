@@ -11,6 +11,7 @@ import {
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ClassProvider, useClass } from './context/ClassContext';
 import { ThemeProvider } from './context/ThemeContext';
+import { CommercialProvider } from './context/CommercialContext';
 
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
@@ -285,7 +286,9 @@ export default function App() {
       <AuthProvider>
         <BrowserRouter>
           <ClassProvider>
-            <AppContent />
+            <CommercialProvider>
+              <AppContent />
+            </CommercialProvider>
           </ClassProvider>
         </BrowserRouter>
       </AuthProvider>

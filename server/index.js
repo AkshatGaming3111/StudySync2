@@ -11,6 +11,8 @@ const assignmentRoutes = require('./routes/assignments');
 const testRoutes = require('./routes/tests');
 const leaderboardRoutes = require('./routes/leaderboards');
 const aiRoutes = require('./routes/ai');
+const billingRoutes = require('./routes/billing');
+const reportRoutes = require('./routes/reports');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -28,6 +30,8 @@ app.use('/api/assignments', assignmentRoutes);
 app.use('/api/tests', testRoutes);
 app.use('/api/leaderboards', leaderboardRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/billing', billingRoutes);
+app.use('/api/reports', reportRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
