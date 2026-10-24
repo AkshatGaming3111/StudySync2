@@ -51,8 +51,8 @@
         "c_1788421696602",
         "c_1788421654559"
       ],
-      "xp": 3115,
-      "level": 11,
+      "xp": 4215,
+      "level": 15,
       "streak": 4,
       "badges": [
         "b_founder",
@@ -61,7 +61,9 @@
         "b_perfect_score",
         "b_speed_demon",
         "b_streak_titan",
-        "b_top_ranker"
+        "b_top_ranker",
+        "b_pro_scholar",
+        "b_institute_leader"
       ],
       "createdAt": "2026-08-31T08:13:29.030Z",
       "stats": {
@@ -73,7 +75,20 @@
       },
       "salt": "6ca4bffef45526e994df804938694d49",
       "hash": "87378dfe06de3bb24de2240e843e185fe04c2748b463846b7173899cc454f21946a650870c96862375f672769686334346cdd146e852245946253a8813b44d48",
-      "geminiApiKey": ""
+      "geminiApiKey": "",
+      "plan": "free",
+      "subscription": {
+        "plan": "free",
+        "status": "active",
+        "billingCycle": "annual",
+        "currency": "INR",
+        "amount": 0,
+        "paymentMethod": "card",
+        "transactionId": "tx_1792819624331_33iq1",
+        "startedAt": "2026-10-24T05:27:04.331Z",
+        "expiresAt": "2027-10-24T05:27:04.331Z",
+        "renewsAt": "2027-10-24T05:27:04.331Z"
+      }
     },
     {
       "id": "u_1788421637423",
@@ -130,7 +145,7 @@
         "c_it_tech",
         "c_1788421696602"
       ],
-      "xp": 271,
+      "xp": 281,
       "level": 1,
       "streak": 1,
       "badges": [
@@ -143,6 +158,10 @@
         "averageQuizScore": 67,
         "studyHours": 0,
         "flashcardsMastered": 0
+      },
+      "usage": {
+        "aiQueriesToday": 1,
+        "lastResetDate": "2026-10-24"
       }
     },
     {
@@ -1978,6 +1997,84 @@
         }
       ],
       "createdAt": "2026-10-20T13:25:12.132Z"
+    },
+    {
+      "id": "deck_gen_1792820725099",
+      "title": "Deck: Ray Optics & Reflection of Light",
+      "subject": "General Study",
+      "cardsCount": 5,
+      "cards": [
+        {
+          "id": "fc_gen_1792820725098_0",
+          "front": "What is the Law of Reflection regarding angles?",
+          "back": "The angle of incidence equals the angle of reflection: \\( \\theta_i = \\theta_r \\).",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792820725098_1",
+          "front": "What geometric relation do the incident ray, reflected ray, and normal share?",
+          "back": "They all lie in the same plane.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792820725098_2",
+          "front": "State the mirror formula relating focal length, image distance, and object distance.",
+          "back": "\\( \\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u} \\)",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792820725098_3",
+          "front": "How is the linear magnification \\( m \\) of a spherical mirror calculated using distances?",
+          "back": "\\( m = -\\frac{v}{u} \\)",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792820725098_4",
+          "front": "What type of image is formed by a convex mirror regardless of the object's position?",
+          "back": "A virtual, erect, and diminished image.",
+          "difficulty": "hard"
+        }
+      ],
+      "createdAt": "2026-10-24T05:45:25.099Z"
+    },
+    {
+      "id": "deck_gen_1792821713741",
+      "title": "Deck: Ray Optics & Reflection of Light",
+      "subject": "General Study",
+      "cardsCount": 5,
+      "cards": [
+        {
+          "id": "fc_gen_1792821713740_0",
+          "front": "What are the two main conditions defined by the Law of Reflection?",
+          "back": "1) The angle of incidence equals the angle of reflection (Θ_i = Θ_r). 2) The incident ray, reflected ray, and normal all lie in the same plane.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792821713741_1",
+          "front": "State the mirror formula relating focal length, image distance, and object distance.",
+          "back": "1/f = 1/v + 1/u",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792821713741_2",
+          "front": "What is the equation for linear magnification (m) in terms of image distance and object distance?",
+          "back": "m = -v/u",
+          "difficulty": "good"
+        },
+        {
+          "id": "fc_gen_1792821713741_3",
+          "front": "What type of images are formed by a convex mirror regardless of the object's position?",
+          "back": "Virtual, erect, and diminished images.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "fc_gen_1792821713741_4",
+          "front": "When does a concave mirror produce a real and inverted image?",
+          "back": "When the object is placed beyond the principal focus.",
+          "difficulty": "hard"
+        }
+      ],
+      "createdAt": "2026-10-24T06:01:53.741Z"
     }
   ],
   "whiteboardSavedNotes": []

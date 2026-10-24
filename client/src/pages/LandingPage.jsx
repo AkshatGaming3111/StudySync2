@@ -29,6 +29,15 @@ import LaTeXRenderer from '../components/Common/LaTeXRenderer';
 import SlidingBackground from '../components/Common/SlidingBackground';
 
 export default function LandingPage({ onOpenAuth, onOpenSignIn, onOpenRegister }) {
+  React.useEffect(() => {
+    if (window.location.hash === '#pricing' || window.location.pathname === '/pricing') {
+      const el = document.getElementById('pricing');
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 150);
+      }
+    }
+  }, []);
+
   // Flagship live capabilities sliding showcase
   const slidingHighlights = [
     {
@@ -164,6 +173,12 @@ export default function LandingPage({ onOpenAuth, onOpenSignIn, onOpenRegister }
           </div>
 
           <div className="flex items-center gap-3">
+            <a
+              href="#pricing"
+              className="hidden sm:inline-block px-3 py-1.5 text-xs font-semibold text-gray-300 hover:text-white transition-colors"
+            >
+              Pricing & Plans
+            </a>
             <button
               onClick={() => onOpenSignIn ? onOpenSignIn() : onOpenAuth('login')}
               className="px-4 py-2 rounded-xl text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 border border-white/10 transition-colors"
@@ -440,7 +455,7 @@ export default function LandingPage({ onOpenAuth, onOpenSignIn, onOpenRegister }
       </section>
 
       {/* Commercial Pricing Plans Section */}
-      <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10 space-y-12">
+      <section id="pricing" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-extrabold uppercase tracking-widest text-brand-400">
             Commercial Tier Plans

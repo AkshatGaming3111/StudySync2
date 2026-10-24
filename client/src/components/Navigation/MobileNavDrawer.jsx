@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useClass } from '../../context/ClassContext';
 import { useTheme } from '../../context/ThemeContext';
+import { useCommercial } from '../../context/CommercialContext';
 import {
   X,
   LayoutDashboard,
@@ -24,7 +25,9 @@ import {
   Bot,
   ChevronRight,
   Check,
-  BookOpen
+  BookOpen,
+  CreditCard,
+  FileText
 } from 'lucide-react';
 
 export default function MobileNavDrawer({
@@ -37,6 +40,7 @@ export default function MobileNavDrawer({
   const { currentUser, isTeacher, logout } = useAuth();
   const { classes, activeClass, selectClass } = useClass();
   const { isDark, toggleTheme } = useTheme();
+  const { openPricing, openReport } = useCommercial();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -176,7 +180,7 @@ export default function MobileNavDrawer({
           </div>
 
           {/* Ask StudyBot AI Quick Launch */}
-          <div className="p-4 pb-2">
+          <div className="p-4 pb-2 space-y-2">
             <button
               onClick={() => {
                 onClose();
@@ -190,6 +194,36 @@ export default function MobileNavDrawer({
               </div>
               <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
             </button>
+
+            {/* Commercial Plan & Parent Report Quick Links */}
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => {
+                  onClose();
+                  openPricing();
+                }}
+                className="py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-left transition-colors flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2 min-w-0">
+                  <CreditCard className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+                  <span className="text-[11px] font-bold truncate">Plans & Pro</span>
+                </div>
+                <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">
+                  {currentUser?.plan || 'Free'}
+                </span>
+              </button>
+
+              <button
+                onClick={() => {
+                  onClose();
+                  openReport(currentUser?.id);
+                }}
+                className="py-2 px-3 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/30 text-brand-700 dark:text-brand-300 text-left transition-colors flex items-center gap-2"
+              >
+                <FileText className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
+                <span className="text-[11px] font-bold truncate">Report Card</span>
+              </button>
+            </div>
           </div>
 
           {/* Enrolled Classroom Switcher */}

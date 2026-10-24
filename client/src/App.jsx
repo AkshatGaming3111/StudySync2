@@ -11,7 +11,7 @@ import {
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ClassProvider, useClass } from './context/ClassContext';
 import { ThemeProvider } from './context/ThemeContext';
-import { CommercialProvider } from './context/CommercialContext';
+import { CommercialProvider, useCommercial } from './context/CommercialContext';
 
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
@@ -31,6 +31,7 @@ import BadgeGallery from './components/Leaderboard/BadgeGallery';
 import SyncBoard from './components/Whiteboard/SyncBoard';
 import LectureSummarizer from './components/AI/LectureSummarizer';
 import SettingsPage from './pages/SettingsPage';
+import ParentReportModal from './components/Parent/ParentReportModal';
 
 import JoinClassModal from './components/Classroom/JoinClassModal';
 import CreateClassModal from './components/Classroom/CreateClassModal';
@@ -59,6 +60,34 @@ function ClassIdRedirect() {
 function TestRedirect() {
   const { testId } = useParams();
   return <Navigate to={testId ? `/arena/${testId}` : '/arena'} replace />;
+}
+
+function PublicReportView() {
+  const { studentId } = useParams();
+  const navigate = useNavigate();
+  return (
+    <div className="min-h-screen bg-gray-950 text-gray-100 flex items-center justify-center p-4 relative">
+      <ParentReportModal studentId={studentId} onClose={() => navigate('/')} />
+    </div>
+  );
+}
+
+function AuthenticatedReportView() {
+  const { studentId } = useParams();
+  const navigate = useNavigate();
+  return (
+    <ParentReportModal studentId={studentId} onClose={() => navigate('/dashboard')} />
+  );
+}
+
+function PricingRoute() {
+  const { openPricing } = useCommercial();
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    openPricing();
+    navigate('/dashboard', { replace: true });
+  }, [openPricing, navigate]);
+  return null;
 }
 
 function AppContent() {
@@ -117,6 +146,18 @@ function AppContent() {
           path="/register"
           element={<AuthPage initialMode="register" onBackToLanding={() => navigate('/')} />}
         />
+        <Route
+          path="/pricing"
+          element={
+            <LandingPage
+              onOpenAuth={(mode) => navigate(mode === 'register' ? '/register' : '/login')}
+              onOpenSignIn={() => navigate('/login')}
+              onOpenRegister={() => navigate('/register')}
+            />
+          }
+        />
+        <Route path="/reports/:studentId" element={<PublicReportView />} />
+        <Route path="/report/:studentId" element={<PublicReportView />} />
         <Route
           path="*"
           element={
@@ -205,6 +246,9 @@ function AppContent() {
             <Route path="/whiteboard" element={<SyncBoard />} />
             <Route path="/flashcards" element={<LectureSummarizer />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/pricing" element={<PricingRoute />} />
+            <Route path="/reports/:studentId" element={<AuthenticatedReportView />} />
+            <Route path="/report/:studentId" element={<AuthenticatedReportView />} />
 
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>

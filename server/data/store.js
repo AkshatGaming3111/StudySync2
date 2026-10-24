@@ -1,19 +1,43 @@
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const initialData = require('./initialData');
 
-const DB_FILE = path.join(__dirname, 'studysync_db.json');
+const LOCAL_DB_FILE = path.join(__dirname, 'studysync_db.json');
+const isServerless = Boolean(
+  process.env.VERCEL ||
+  process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  process.env.LAMBDA_TASK_ROOT
+);
+
+function getDBFilePath() {
+  if (isServerless) {
+    const tmpFile = path.join(os.tmpdir(), 'studysync_db.json');
+    if (!fs.existsSync(tmpFile)) {
+      try {
+        if (fs.existsSync(LOCAL_DB_FILE)) {
+          fs.copyFileSync(LOCAL_DB_FILE, tmpFile);
+        }
+      } catch (e) {
+        // Fallback handled in Store init
+      }
+    }
+    return tmpFile;
+  }
+  return LOCAL_DB_FILE;
+}
 
 class Store {
   constructor() {
     this.data = null;
+    this.dbFile = getDBFilePath();
     this.init();
   }
 
   init() {
     try {
-      if (fs.existsSync(DB_FILE)) {
-        const raw = fs.readFileSync(DB_FILE, 'utf8');
+      if (fs.existsSync(this.dbFile)) {
+        const raw = fs.readFileSync(this.dbFile, 'utf8');
         this.data = JSON.parse(raw);
         // Ensure all required collections exist
         for (const key of Object.keys(initialData)) {
@@ -34,8 +58,19 @@ class Store {
 
   save() {
     try {
-      fs.writeFileSync(DB_FILE, JSON.stringify(this.data, null, 2), 'utf8');
+      fs.writeFileSync(this.dbFile, JSON.stringify(this.data, null, 2), 'utf8');
     } catch (err) {
+      if (err.code === 'EROFS' || err.code === 'EACCES') {
+        try {
+          const tmpFile = path.join(os.tmpdir(), 'studysync_db.json');
+          fs.writeFileSync(tmpFile, JSON.stringify(this.data, null, 2), 'utf8');
+          this.dbFile = tmpFile;
+          return;
+        } catch (tmpErr) {
+          console.warn('Serverless filesystem warning: in-memory persistence active');
+          return;
+        }
+      }
       console.error('Error persisting database:', err);
     }
   }

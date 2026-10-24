@@ -354,8 +354,15 @@ router.post('/:id/bulk-enroll', verifyToken, requireTeacher, (req, res) => {
         email,
         name,
         role: 'student',
+        salt,
+        hash,
         passwordSalt: salt,
         passwordHash: hash,
+        plan: 'free',
+        usage: {
+          aiQueriesToday: 0,
+          lastResetDate: new Date().toISOString().split('T')[0]
+        },
         gradeClass: classItem.gradeLevel || 'Grade 10',
         section: (item.section || 'A').toUpperCase(),
         avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(name)}`,

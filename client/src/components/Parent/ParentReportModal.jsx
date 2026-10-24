@@ -65,6 +65,7 @@ export default function ParentReportModal({ studentId, onClose }) {
     if (!report) return;
     const student = report.student;
     const metrics = report.metrics;
+    const reportUrl = `${window.location.origin}/reports/${student.id}`;
     const text = `📊 *StudySync Academic Diagnostic Report Card*\n\n` +
       `👤 *Student:* ${student.name} (${student.gradeClass} - ${student.section})\n` +
       `🏫 *Institute:* ${report.institute?.name || 'StudySync Academy'}\n` +
@@ -72,6 +73,7 @@ export default function ParentReportModal({ studentId, onClose }) {
       `📅 *Attendance:* ${metrics.attendanceRate} | *Study Streak:* ${metrics.learningStreakDays} days\n` +
       `📝 *Homework Mastery:* ${metrics.avgAssignmentScore}% | *Exam Arena:* ${metrics.avgQuizScore}%\n\n` +
       `💡 *Teacher Remarks:* "${report.pedagogicalInsights?.teacherRemarks}"\n\n` +
+      `🔗 *View Live Verified Report Card:* ${reportUrl}\n\n` +
       `Generated securely via StudySync AI Interactive Classroom.`;
 
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
@@ -82,6 +84,7 @@ export default function ParentReportModal({ studentId, onClose }) {
     if (!report) return;
     const student = report.student;
     const metrics = report.metrics;
+    const reportUrl = `${window.location.origin}/reports/${student.id}`;
     const subject = `Academic Progress Diagnostic Report - ${student.name}`;
     const body = `Dear Parent/Guardian,\n\nPlease find the diagnostic academic progress report for ${student.name}:\n\n` +
       `Grade & Section: ${student.gradeClass} - ${student.section}\n` +
@@ -89,6 +92,7 @@ export default function ParentReportModal({ studentId, onClose }) {
       `Attendance: ${metrics.attendanceRate}\n` +
       `Learning Streak: ${metrics.learningStreakDays} days\n\n` +
       `Teacher Remarks: ${report.pedagogicalInsights?.teacherRemarks}\n\n` +
+      `View the live, verified interactive report card here:\n${reportUrl}\n\n` +
       `Best regards,\n${report.institute?.name || 'StudySync Educational Team'}`;
 
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

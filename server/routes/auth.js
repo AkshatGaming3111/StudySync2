@@ -55,6 +55,11 @@ router.post('/register', (req, res) => {
     level: 1,
     streak: 1,
     badges: ['b_founder'],
+    plan: 'free',
+    usage: {
+      aiQueriesToday: 0,
+      lastResetDate: new Date().toISOString().split('T')[0]
+    },
     createdAt: new Date().toISOString(),
     stats: {
       assignmentsCompleted: 0,
@@ -121,8 +126,11 @@ router.post('/login', (req, res) => {
 
   // Support both cryptographic salt/hash and legacy passwords if any
   let isPasswordValid = false;
-  if (user.salt && user.hash) {
-    isPasswordValid = verifyPassword(password.trim(), user.salt, user.hash);
+  const userSalt = user.salt || user.passwordSalt;
+  const userHash = user.hash || user.passwordHash;
+
+  if (userSalt && userHash) {
+    isPasswordValid = verifyPassword(password.trim(), userSalt, userHash);
   } else if (user.password) {
     isPasswordValid = user.password === password.trim();
     // Upgrade legacy user to cryptographic salt/hash on login
