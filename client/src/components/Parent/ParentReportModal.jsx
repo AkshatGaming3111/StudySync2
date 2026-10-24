@@ -44,6 +44,17 @@ export default function ParentReportModal({ studentId, onClose }) {
     loadReport();
   }, [studentId]);
 
+  // Handle Escape key to close
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   if (!studentId) return null;
 
   const handlePrint = () => {
@@ -84,10 +95,18 @@ export default function ParentReportModal({ studentId, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-md overflow-y-auto print:p-0 print:bg-white print:fixed print:inset-0">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-md overflow-y-auto print:p-0 print:bg-white print:fixed print:inset-0 cursor-pointer"
+    >
       
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-4 sm:p-8 my-6 text-gray-900 dark:text-gray-100 print:border-none print:shadow-none print:p-0 print:my-0 print:max-w-none print:w-full print:text-black">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-4xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-4 sm:p-8 my-6 text-gray-900 dark:text-gray-100 print:border-none print:shadow-none print:p-0 print:my-0 print:max-w-none print:w-full print:text-black cursor-default"
+      >
         
         {/* Toolbar - Screen Only */}
         <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-gray-200 dark:border-white/10 print:hidden">
@@ -130,9 +149,11 @@ export default function ParentReportModal({ studentId, onClose }) {
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-xl text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+              className="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-300 font-bold text-xs flex items-center gap-1.5 transition-colors border border-rose-200 dark:border-rose-900 shadow-xs"
+              title="Exit Report Card (Esc)"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4" />
+              <span>Exit</span>
             </button>
           </div>
         </div>
@@ -352,6 +373,29 @@ export default function ParentReportModal({ studentId, onClose }) {
                   <div className="w-28 border-b border-gray-400 dark:border-gray-600 mb-1 print:border-black" />
                   <span className="text-[10px] font-bold">Head of Academics</span>
                 </div>
+              </div>
+            </div>
+
+            {/* Screen-Only Exit / Close Bottom Action Bar */}
+            <div className="pt-6 border-t border-gray-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 print:hidden">
+              <span className="text-xs text-gray-400 font-medium">Finished reviewing official diagnostic transcript?</span>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handlePrint}
+                  className="px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 text-xs font-bold flex items-center gap-1.5 transition-colors"
+                >
+                  <Printer className="w-4 h-4" />
+                  <span>Print Document</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="px-5 py-2.5 rounded-xl bg-gray-900 hover:bg-black dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold text-xs shadow-md flex items-center gap-1.5 transition-all active:scale-95"
+                >
+                  <X className="w-4 h-4" />
+                  <span>Exit / Close Report Card</span>
+                </button>
               </div>
             </div>
 

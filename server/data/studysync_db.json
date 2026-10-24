@@ -48,9 +48,10 @@
         "c_science_physics",
         "c_maths_geom",
         "c_it_tech",
-        "c_1788421696602"
+        "c_1788421696602",
+        "c_1788421654559"
       ],
-      "xp": 3100,
+      "xp": 3115,
       "level": 11,
       "streak": 4,
       "badges": [
@@ -333,7 +334,9 @@
       "teacherAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
       "themeColor": "rose",
       "bannerImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
-      "studentIds": [],
+      "studentIds": [
+        "u_1788164009030"
+      ],
       "schedule": "Mon, Wed, Fri • 10:00 AM - 11:30 AM",
       "roomLocation": "Virtual Lab Alpha / Room 302",
       "createdAt": "2026-09-03T07:47:34.559Z",
@@ -390,8 +393,19 @@
           "content": "helloo",
           "attachments": [],
           "createdAt": "2026-10-23T06:12:02.972Z",
-          "reactions": {},
-          "comments": []
+          "reactions": {
+            "🔥": 1
+          },
+          "comments": [
+            {
+              "id": "comm_1792818456921",
+              "authorId": "u_1788164009030",
+              "authorName": "Akshat Singh",
+              "authorAvatar": "https://api.dicebear.com/7.x/notionists/svg?seed=Akshat%20Singh&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf",
+              "content": "Suprabhat Sir",
+              "createdAt": "2026-10-24T05:07:36.921Z"
+            }
+          ]
         },
         {
           "id": "post_1792064453003",

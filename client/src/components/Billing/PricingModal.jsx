@@ -46,6 +46,18 @@ export default function PricingModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
+  // Handle Escape key to close
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const currentPlan = currentUser?.plan || 'free';
@@ -192,15 +204,25 @@ export default function PricingModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-4xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 my-8 text-gray-900 dark:text-gray-100 animate-in zoom-in-95 duration-200">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md overflow-y-auto cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-4xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 my-8 text-gray-900 dark:text-gray-100 animate-in zoom-in-95 duration-200 cursor-default"
+      >
         
-        {/* Close Button */}
+        {/* Prominent Exit / Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          className="absolute top-4 sm:top-6 right-4 sm:right-6 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 text-gray-700 dark:text-gray-200 text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs border border-gray-200 dark:border-white/10 z-10"
+          title="Exit Pricing & Subscription (Esc)"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
+          <span>Exit</span>
         </button>
 
         {/* STEP 1: PLANS CATALOG */}
@@ -389,6 +411,21 @@ export default function PricingModal({ isOpen, onClose }) {
                 {cancelMessage}
               </div>
             )}
+
+            {/* Bottom Exit Bar for Plans Step */}
+            <div className="pt-4 border-t border-gray-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <span className="text-gray-500 dark:text-gray-400">
+                Want to continue with your current plan?
+              </span>
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 text-gray-700 dark:text-gray-200 font-bold transition-colors flex items-center gap-1.5"
+              >
+                <X className="w-4 h-4" />
+                <span>Exit & Return to Classroom</span>
+              </button>
+            </div>
           </div>
         )}
 
@@ -542,32 +579,45 @@ export default function PricingModal({ isOpen, onClose }) {
             </div>
 
             {/* Actions */}
-            <div className="flex items-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => setStep('plans')}
-                className="w-1/3 py-2.5 rounded-2xl border border-gray-200 dark:border-white/10 text-xs font-bold hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
-              >
-                Back
-              </button>
-              <button
-                type="button"
-                onClick={handleCompletePayment}
-                disabled={loading}
-                className="flex-1 py-2.5 rounded-2xl bg-gradient-to-r from-brand-500 via-teal-500 to-indigo-600 hover:from-brand-600 text-white font-bold text-xs shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 disabled:opacity-50"
-              >
-                {loading ? (
-                  <>
-                    <RotateCcw className="w-4 h-4 animate-spin" />
-                    <span>Processing Payment...</span>
-                  </>
-                ) : (
-                  <>
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>Pay {currencySymbol}{finalPrice.toLocaleString()} & Activate</span>
-                  </>
-                )}
-              </button>
+            <div className="space-y-2.5 pt-2">
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setStep('plans')}
+                  className="w-1/3 py-2.5 rounded-2xl border border-gray-200 dark:border-white/10 text-xs font-bold hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                >
+                  ← Back to Plans
+                </button>
+                <button
+                  type="button"
+                  onClick={handleCompletePayment}
+                  disabled={loading}
+                  className="flex-1 py-2.5 rounded-2xl bg-gradient-to-r from-brand-500 via-teal-500 to-indigo-600 hover:from-brand-600 text-white font-bold text-xs shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 disabled:opacity-50"
+                >
+                  {loading ? (
+                    <>
+                      <RotateCcw className="w-4 h-4 animate-spin" />
+                      <span>Processing Payment...</span>
+                    </>
+                  ) : (
+                    <>
+                      <ShieldCheck className="w-4 h-4" />
+                      <span>Pay {currencySymbol}{finalPrice.toLocaleString()} & Activate</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              <div className="text-center pt-1">
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="text-xs font-semibold text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 transition-colors inline-flex items-center gap-1"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  <span>Cancel and Exit to Classroom</span>
+                </button>
+              </div>
             </div>
           </div>
         )}

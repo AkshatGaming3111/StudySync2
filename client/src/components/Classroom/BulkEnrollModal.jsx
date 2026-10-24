@@ -19,6 +19,17 @@ export default function BulkEnrollModal({ classId, classTitle, onEnrollSuccess, 
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
 
+  // Handle Escape key to close
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   // Parse CSV / Text input
   const handleTextChange = (text) => {
     setInputText(text);
@@ -95,15 +106,25 @@ Kabir Mehta, kabir.mehta@studysync.edu, A`;
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 text-gray-900 dark:text-gray-100 animate-in zoom-in-95 duration-200">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md overflow-y-auto cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 rounded-3xl shadow-2xl p-5 sm:p-8 text-gray-900 dark:text-gray-100 animate-in zoom-in-95 duration-200 cursor-default"
+      >
         
-        {/* Close Button */}
+        {/* Close / Exit Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          className="absolute top-4 sm:top-6 right-4 sm:right-6 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 text-gray-700 dark:text-gray-200 text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs border border-gray-200 dark:border-white/10"
+          title="Exit Roster Import (Esc)"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
+          <span>Exit</span>
         </button>
 
         {/* Title */}
