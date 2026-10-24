@@ -157,6 +157,7 @@ export default function PricingModal({ isOpen, onClose }) {
     setError(null);
     try {
       const res = await api.billing.checkout({
+        plan: selectedPlanId,
         planId: selectedPlanId,
         billingCycle,
         currency,

@@ -139,7 +139,8 @@ router.get('/status', verifyToken, (req, res) => {
 
 // 3. Process Checkout & Upgrade Subscription (Authenticated)
 router.post('/checkout', verifyToken, (req, res) => {
-  const { plan, billingCycle = 'monthly', currency = 'INR', paymentMethod = 'card' } = req.body;
+  const plan = req.body.plan || req.body.planId;
+  const { billingCycle = 'monthly', currency = 'INR', paymentMethod = 'card' } = req.body;
 
   if (!plan || !PLANS[plan]) {
     return res.status(400).json({ success: false, error: 'Valid plan (pro, institute) is required.' });
@@ -166,6 +167,7 @@ router.post('/checkout', verifyToken, (req, res) => {
   const transactionId = `tx_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const subscription = {
     plan,
+    planId: plan,
     status: 'active',
     billingCycle,
     currency,
@@ -178,7 +180,7 @@ router.post('/checkout', verifyToken, (req, res) => {
   };
 
   // Bonus XP on upgrading
-  const bonusXP = plan === 'institute' ? 500 : 250;
+  const bonusXP = plan === 'institute' ? 2000 : 500;
   store.awardXP(user.id, bonusXP, `Upgraded to ${selectedPlan.name}!`);
 
   // Award Founder or Sponsor badge
@@ -196,6 +198,8 @@ router.post('/checkout', verifyToken, (req, res) => {
     success: true,
     message: `Congratulations! You have upgraded to ${selectedPlan.name}.`,
     plan,
+    planName: selectedPlan.name,
+    bonusXp: bonusXP,
     subscription,
     user: sanitizeUser(updatedUser, true),
     invoice: {
